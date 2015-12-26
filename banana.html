@@ -218,28 +218,28 @@ function open_game() {
 
 function save_game() {
 
-  localStorage.A = bananas;
-
-  localStorage.B = autoclicks;
-
-  localStorage.C = autoclicksrate;
-
-  localStorage.D = originalautoclickscost;
-
-  localStorage.E = newautoclickscost;
-
-  localStorage.F = goldcurrent;
-
-  localStorage.G = goldrate;
-
-  localStorage.H = originalgoldcost;
-
-  localStorage.I = newgoldcost;
-
-  localStorage.J = bananas_per_second;
-
-  localStorage.K = gold_per_second;
-
+  //localStorage.A = bananas;
+  localStorage.setItem('A', bananas);
+  //localStorage.B = autoclicks;
+  localStorage.setItem('B', autoclicks);
+  //localStorage.C = autoclicksrate;
+  localStorage.setItem('C', autoclickskrate);
+  //localStorage.D = originalautoclickscost;
+  localStorage.setItem('D', orginalautoclickcost);
+  //localStorage.E = newautoclickscost;
+  localStorage.setItem('E', newautoclickscost);
+  //localStorage.F = goldcurrent;
+  localStorage.setItem('F', goldcurrent);
+  //localStorage.G = goldrate;
+  localStorage.setItem('G', goldrate);
+  //localStorage.H = originalgoldcost;
+  localStorage.setItem('H', originalgoldcost);
+  //localStorage.I = newgoldcost;
+  localStorage.setItem('I', newgoldcost);
+  //localStorage.J = bananas_per_second;
+  localStorage.setItem('J', bananas_per_second);
+  //localStorage.K = gold_per_second;
+  localStorage.setItem('K', gold_per_second);
 }
 
 function format(n) {
