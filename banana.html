@@ -187,7 +187,8 @@ function reset() {
 }
 
 function open_game() {
-
+load_game = localStorage.getItem( 'game', JSON.parse(game) );
+alert(load_game.bananas);
   if (localStorage.A) {
 
     var bananas = Number(localStorage.A);
