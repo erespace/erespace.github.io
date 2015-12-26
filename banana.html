@@ -188,30 +188,30 @@ function reset() {
 
 function open_game() {
 load_game = JSON.parse(localStorage.getItem( 'game'));
+
+  if (load_game) {
 alert(load_game.bananas);
-  if (localStorage.A) {
-
-    var bananas = Number(localStorage.A);
+    var bananas = Number(load_game.bananas);
    
-    var autoclicks = Number(localStorage.B);
+    var autoclicks = Number(load_game.autoclicks);
 
-    var autoclicksrate = Number(localStorage.C);
+    var autoclicksrate = Number(load_game.auytoclicksrate);
 
-    var originalautoclickscost = Number(localStorage.D);
+    var originalautoclickscost = Number(load_game.orignalautoclickscost);
 
-    var newautoclickscost = Number(localStorage.E);
+    var newautoclickscost = Number(load_game.newautoclickscost);
 
-    var goldcurrent = Number(localStorage.F);
+    var goldcurrent = Number(load_game.goldcurrent);
 
-    var goldrate = Number(localStorage.G);
+    var goldrate = Number(load_game.goldrate);
 
-    var originalgoldcost = Number(localStorage.H);
+    var originalgoldcost = Number(load_game.originalgoldcost);
 
-    var newgoldcost = Number(localStorage.I);
+    var newgoldcost = Number(load_game.newgoldcost;
 
-    var bananas_per_second = Number(localStorage.J);
+    var bananas_per_second = Number(load_game.bananas_per_second);
 
-    var gold_per_second = Number(localStorage.K);
+    var gold_per_second = Number(load_game.gold_per_second);
 
   }
 
