@@ -147,7 +147,7 @@ var bananas_per_second = 0.00;
 var gold_per_second = 0.00;
 
 open_game();
-
+alert(bananas);
 function reset() {
 
   if (confirm("Are you sure you want to reset this game? (all banana/s and automatic pickers will be set to zero)") == false) {
@@ -190,9 +190,9 @@ function open_game() {
 load_game = JSON.parse(localStorage.getItem( 'game'));
 
   if (load_game) {
-alert(load_game.bananas);
+
     var bananas = Number(load_game.bananas);
-   alert(bananas);
+   
     var autoclicks = Number(load_game.autoclicks);
 
     var autoclicksrate = Number(load_game.auytoclicksrate);
