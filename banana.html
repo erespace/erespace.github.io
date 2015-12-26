@@ -189,9 +189,9 @@ function reset() {
 function open_game() {
 
   if (localStorage.A) {
-
-    bananas = Number(localStorage.A);
-
+alert(localStorage.A);
+    bananas = Number(blocalStorage.A);
+    bananas = localStorage.getItem('A');
     autoclicks = Number(localStorage.B);
 
     autoclicksrate = Number(localStorage.C);
