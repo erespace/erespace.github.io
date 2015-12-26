@@ -221,7 +221,7 @@ function save_game() {
 var game = {};
 game.autoclicks = autoclicks;
 game.autoclicksrate = autoclicksrate;
-game.originalautoclickscost = orignalautoclickscost;
+game.originalautoclickscost = originalautoclickscost;
 game.newautoclickscost = newautoclickscost;;
 game.goldcurrent = goldcurrent;
 game.goldrate = goldrate;
@@ -230,7 +230,7 @@ game.newgoldcost = newgoldcost;
 game.bananas_per_second = bananas_per_second;
 game.gold_per_second - gold_per_second;
 
-console.log( gmae );
+console.log( game );
 localStorage.setItem( 'game', JSON.stringify(game) );
 
 
