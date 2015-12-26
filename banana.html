@@ -217,19 +217,23 @@ alert(localStorage.A);
 }
 
 function save_game() {
+alert(bananas);
+var game = {};
+game.autoclicks = autoclicks;
+game.autoclicksrate = autoclicksrate;
+game.originalautoclickscost = orignalautoclickscost;
+game.newautoclickscost = newautoclickscost;;
+game.goldcurrent = goldcurrent;
+game.goldrate = goldrate;
+game.originalgoldcost = originalgoldcost;
+game.newgoldcost = newgoldcost;
+game.bananas_per_second = bananas_per_second;
+game.gold_per_second - gold_per_second;
 
-  localStorage.A = bananas;
-  
-  localStorage.B = autoclicks;
-  localStorage.C = autoclicksrate;
-  localStorage.D = originalautoclickscost;
-  localStorage.E = newautoclickscost;
-  localStorage.F = goldcurrent;
-  localStorage.G = goldrate;
-  localStorage.H = originalgoldcost;
-  localStorage.I = newgoldcost;
-  localStorage.J = bananas_per_second;
-  localStorage.K = gold_per_second;
+console.log( gmae );
+localStorage.setItem( 'game', JSON.stringify(game) );
+
+
 }
 
 function format(n) {
