@@ -145,6 +145,7 @@ var gold_click_rate = 0;
 var bananas_per_second = 0.00;
 
 var gold_per_second = 0.00;
+localStorage.A = 200;
 
 open_game();
 
@@ -187,10 +188,9 @@ function reset() {
 }
 
 function open_game() {
-localStorage.A = 200;
-alert(localStorage.getItem('A'));
-  if (localStorage.A) {
 
+  if (localStorage.A) {
+alert(localStorage.getItem('A'));
     bananas = Number(blocalStorage.A);
     bananas = localStorage.getItem('A');
     autoclicks = Number(localStorage.B);
