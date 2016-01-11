@@ -257,7 +257,8 @@ function create_rocket(value) {
   div.style.background = "";
   div.style.color = "black";
   div.style.fontWeight = "bold";
-   div.innerHTML = "<img src='"+ document.getElementById("banana").src+"' style='width:50px;'>" + "+" + value;
+   //div.innerHTML = "<img src='"+ document.getElementById("banana").src+"' style='width:50px;'>" + "+" + value;
+   div.innerHTML = "<img src='"+ document.getElementById("banana").src+">";
   div.className = "rocket bounce";
   div.id = Number(n + right + topz);
   document.getElementById("div2").appendChild(div);
@@ -279,7 +280,7 @@ function create_info_rocket(value) {
   div.style.fontWeight = "bold";
 div.innerHTML = "+" + value;
   //div.innerHTML = "+" + value;
-  div.className = "rocket";
+  div.className = "rocket bounce";
   div.id = Number(n + right + topz);
   document.getElementById("div2").appendChild(div);
   setTimeout(function() {
