@@ -138,7 +138,7 @@ margin-bottom:25px;  Top:0%; position:relative;font-weight:bold;TEXT-ALIGN:cente
   box-shadow: none;//overflow-y:hidden;scroll:none;z-index:500;outline: none;font-size:72px;  COLOR:blue;width: 100%; le//ft:2.5%;border:0px  none; //text-shadow: 0 0 40px green, 0 0 40px green, 0 0 40px green, 0 0 40px green, 0 0 40px green, 0 0 40px green, 0 0 6px green, 0 0 40px green, 0 0 40px green, 0 0 40px green, 0 0 6px green, 0 0 6px green, 0 0 40px green, 0 0 40px green, 0 0 40px green, 0 0 6px green, 0 0 40px green, 0 0 40px green, 0 0 40px green, 0 0 40px green;
 }
 
-#commands {display:none;}
+#commands {}
 .rocket {
   z-index: 700;
   position: absolute;
@@ -253,7 +253,7 @@ function update_display() {
  // document.getElementById("GOLD").innerHTML =
     format(Number(goldcurrent).toFixed(2)) + "<small> <br>" + (Number(gold_per_second) + Number(gold_click_rate)).toFixed(2) + "/s</small>";
   window.document.title = Number(bananas).toFixed(2) + " banana/s - Banana Click - The Original Banana Farmer Game ";
-  document.getElementById("commands").style.display=" ";
+ 
   save_game();
 }
 function create_rocket(value) {
