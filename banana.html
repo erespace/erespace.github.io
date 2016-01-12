@@ -108,12 +108,12 @@ cursor:pointer;
   -ms-transfovrm: scale(.35,3.02);
   -o-transforvm: scale(.35,3.02);
   transfobrm:scale(.35,3.2);
-  width: 250px;
+  width: 200px;
   //margin-left: 300px;
  
   display: block;
   margin-top: 10px;
-   margin-bottom:25px;
+   margin-bottom:10px;
   
   -webkit-transfform: rotateX(-45deg);
   transfform: rotateX(-45deg);
@@ -136,15 +136,15 @@ cursor:pointer;
 #score{
 
 margin-bottom:25px;  Top:0%; position:relative;font-weight:bold;TEXT-ALIGN:center;-webkit-box-shadow: none;
-  box-shadow: none;//overflow-y:hidden;scroll:none;z-index:500;outline: none;font-size:24px;  COLOR:blue;width: 100%; le//ft:2.5%;border:0px  none; //text-shadow: 0 0 40px green, 0 0 40px green, 0 0 40px green, 0 0 40px green, 0 0 40px green, 0 0 40px green, 0 0 6px green, 0 0 40px green, 0 0 40px green, 0 0 40px green, 0 0 6px green, 0 0 6px green, 0 0 40px green, 0 0 40px green, 0 0 40px green, 0 0 6px green, 0 0 40px green, 0 0 40px green, 0 0 40px green, 0 0 40px green;
+  box-shadow: none;//overflow-y:hidden;scroll:none;z-index:500;outline: none;font-size:18px;  COLOR:blue;width: 100%; le//ft:2.5%;border:0px  none; //text-shadow: 0 0 40px green, 0 0 40px green, 0 0 40px green, 0 0 40px green, 0 0 40px green, 0 0 40px green, 0 0 6px green, 0 0 40px green, 0 0 40px green, 0 0 40px green, 0 0 6px green, 0 0 6px green, 0 0 40px green, 0 0 40px green, 0 0 40px green, 0 0 6px green, 0 0 40px green, 0 0 40px green, 0 0 40px green, 0 0 40px green;
 }
 
 #commands {}
 .rocket {
   z-index: 700;
   position: absolute;
-  font-size: 30px;
-  backgrou$$nd-color: black;
+  font-size: 12px;
+  backgrou$$ncolor: black;
   padding: 1%;
   text-shadow: 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px black, 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px green, 0 0 4px green, 0 0 4px green;
 }
@@ -269,7 +269,7 @@ function create_rocket(value) {
   div.style.background = "";
   div.style.color = "black";
   div.style.fontWeight = "bold";
-   div.innerHTML = "<img src='"+ document.getElementById("banana").src+"' style='width:150px;'>" + value;
+   div.innerHTML = "<img src='"+ document.getElementById("banana").src+"' style='width:50px;'>" + value;
    //div.innerHTML = "<img src='"+ document.getElementById("banana").src+"' style='width:50px;'>";
   div.className = "rocket bounce";
   div.id = Number(n + right + topz);
