@@ -178,7 +178,7 @@ var bananas_per_second = 0.00;
 var gold_per_second = 0.00;
 //open_game();
 function reset() {
-  if (confirm("Are you sure you want to reset this game? (all banana/s and automatic pickers will be set to zero)") == false) {
+  if (confirm("Are you sure you want to reset this game? (all euro/s and automatic euro pickers will be set to zero)") == false) {
     return false;
   }
 localStorage.removeItem( 'game');
@@ -248,13 +248,13 @@ function createGuid() {
 }
 function update_display() {
   document.getElementById("SCORE").innerHTML = "<small>"+
-    format(Number(bananas).toFixed(2)) + " BANANA/S</small><br><small> <small>" + (Number(bananas_per_second) + Number(user_click_rate)).toFixed(2) + " <i> per second</i> </small></small>";
+    format(Number(bananas).toFixed(2)) + " EURO/S</small><br><small> <small>" + (Number(bananas_per_second) + Number(user_click_rate)).toFixed(2) + " <i> per second</i> </small></small>";
   if (bananas_per_second > 0) {
     create_rocket(Number(bananas_per_second).toFixed(2));
   }
  // document.getElementById("GOLD").innerHTML =
     format(Number(goldcurrent).toFixed(2)) + "<small> <br>" + (Number(gold_per_second) + Number(gold_click_rate)).toFixed(2) + "/s</small>";
-  window.document.title = Number(bananas).toFixed(2) + " banana/s - Banana Click - The Original Banana Farmer Game ";
+  window.document.title = Number(bananas).toFixed(2) + " euro/s - Euro Click ";
  
   save_game();
 }
@@ -347,7 +347,7 @@ function score(elem) {
 function exchangegold(elem) {
   elem.className = "spin_banana";
   if (bananas < originalgoldcost) {
-    return create_rocket('Please click and collect more banana/s.');
+    return create_rocket('Please click and collect more euro/s.');
   } else {
     create_gold_rocket(Number(goldrate).toFixed(2));
     gold_clicks++;
@@ -360,13 +360,13 @@ function exchangegold(elem) {
 function buyautoclicks(clicks) {
   bananas_per_second = autoclicks * autoclicksrate;
   if (bananas < newautoclickscost) {
-    return create_info_rocket('Please click and collect atleast '+ format(Number(newautoclickscost).toFixed(2))+' banana/s.');
+    return create_info_rocket('Please click and collect atleast '+ format(Number(newautoclickscost).toFixed(2))+' euro/s.');
   }
-  if (confirm("Exchange " + newautoclickscost.toFixed(2) + " banana/s for 1 picker, which will pick: " + autoclicksrate.toFixed(2) + " banana/s every second for you\n\r\n\rYou currently have " + autoclicks + " banana picker/s, picking " + bananas_per_second.toFixed(2) + " banana/s per second.") == false) {
+  if (confirm("Exchange " + newautoclickscost.toFixed(2) + " euro/s for 1 picker, which will pick: " + autoclicksrate.toFixed(2) + " euro/s every second for you\n\r\n\rYou currently have " + autoclicks + " euro picker/s, picking " + bananas_per_second.toFixed(2) + " euro/s per second.") == false) {
     return false;
   }
   if (bananas < newautoclickscost) {
-    return create_info_rocket('Please click and collect more banana/s.');
+    return create_info_rocket('Please click and collect more euro/s.');
   } else {
     autoclicks++;
     bananas -= newautoclickscost;
@@ -386,7 +386,7 @@ document.body.addEventListener('touchstart', function() {}, false);
   var counter = setInterval(ripen_banana, 1000);
 }
 function help() {
-alert("How to play Banana Click.\n\r\n\rClick the banana to collect banana/s.\n\r\n\rClick the Exchange button to exchange banana/s for upgrades.")
+alert("How to play Euro Click.\n\r\n\rClick the Euro to collect euro/s.\n\r\n\rClick the Exchange button to exchange euro/s for upgrades.")
   
 }
 </script>
