@@ -16,6 +16,14 @@ img {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
 }
+
+#reset { 
+
+border:3px none black;cursor:pointer;position:absolute;width:32px;height:32px;top:0%; left:80%; -webkit-filter: grayscale(20%);z-indxex:601; color: blue;background-color:transparent;font-weight:bold; font-weight:bold;text-decoration:underline;
+background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABW5JREFUeNrEV2tMW2UYfs857WlLS8slBmRZGbtAaSkFysUpmuHAIFsWZpjIcDg2UJNlzI3hSPbDpJkhWQCNhCXOYPyzOW9/jChGf6gbUUC8JCZjiWFJs5klxbIflpa2p/V9DxxyKL2Cid/JG/jO+b7ved73e29lwuEwSGPhoQtSHfaySmAZ9nIoHHKEQ+F/Eq13Op3r5ixscSg4BWRkZPTotLo/OI7bS+/CcZ7IsWUCnIIjArzeoM/X6/W3eBV/CS3CJ7t/ywQYfBRKBaSlpQGSYJHERU2aZppjuSJYMcd6+a8JiIZFP2JZFtRqNSABMBgMNl267jelQnmOYZj4V5gKWIXNbsZ7bkHtGhDQjspr1Co1+Hw+EZzAFAoFaNO0gOvU6B9DniVPo3/Z3ymEhPubJoDAu1GbS1qttlXFq0DJKwlA1JpEqVSuWGM1olhuxRq0Bgk1eL3e20tLS68Gg8HrKROoLK9qReAPNGpSViWCScBy88rDWfQN/Cau1bFEIh3XX0MSB/BTe9IEqiqq+zG8BrQ6LahUKlGjeKBRowT3IHfRN4699OKjSVsANW/R6XQDKMDzvKgxASYDGuGlsKNgB/T1n3+Yk5NzOSkCdOf6dP01NL0ITlpLwGTWg4cOQmWlHUzFJvHd0RfaYdm3vBEb99Q9XQfdr3T9ij7RXFFqd0ZmwqgEsrOzR9F0fKRz7dy1E86c7fFt3759CKfjKD8++fhTgJqFcM26eKNoOHGyExqbGsdwerqspNwbCoUSR4HdVmk0ZBgaKLxoSJssFjM43nTMILFjOL0jrfd5fYDeve6MrKws6L94YbmwsLAHa8XVQCAAWCeSywPGfGO3x+NhGFZmdgy73td7byJ4HU6FaIlIGtZSK/RdOH8Pk1FzubViNigE4/rNBgIKBddGniuZnqShod6PWjVHgktORmvIUq1trXC0ve1b3N9qs5S5MflETb9xCXg8S/nkdJLpybwFBQWf4b/uqE6O4Ohg4d6+c0zNYzUOfOWwFpcKWJ4TgkclgFlLodFo1swmCAJYrJaxWAeQlm+PvPUgLy/vZXS0cSKcSqiyEeHHSYlGMj9ZYuqnqZ9jHUCACL631GwbJ2cjzTfdD/zy+yzoMOsRqFzG3ns/LxaBkBACc6HFSURE8FXisSRRORaMRmOQQOUbsNYfiZno5IfLaj5mzkd4JR/EFB6WBPPKvYT9AIbhX3ICdCWuBdfZkmKrIZUmJTMjcxBrCIfhSP0BYGaFpgNNmQkJ7K/fPyGac9X8dFjQH8zAtHwlkQVEwQfDsCEQDHRQAaNsSkKtW23tE1MJCdgr7cPVNdUgWQHxxZaLUr7VXDpg2lPMb0hEMgfDZqURNb8hryEkmL6h/pn6wWRasjtd3Se/42TVjw6iAzHe+7EhmS0uNNfKE9Fq/c/F/P8u9gxfoQWy5MmMQvlEV6cT93+94bpi/C7Y/cnHn86NjoyuC0s6KOAPwLJ/mcLvAeb3+2KCYiAX2y8rpWwiSiaX7zv8XDMWsTPPFu8xT7hcrqT6gT+PPN/y2t8LCyMfXr+xdpjYkKgY8T7xinJJyAJUN6hfkNo0uW/sq9sHp06fesdSVDIRrRoyCX4ZDYx/8WX/8ODwhoq3ti8suj1Edr/0veN4B+B1fkRtWNEuk0Dv3G53SgRoHJ+fn786OnJFOTM9k1QYmkxFpDXYymwO1PwNKUnRWHQvpkyAhhllaO72XOMP39+EyclJuDt/d92CbdvyoAqjB0MNMIqm8VUvOust8hs5xmYJrEUpymGUQ1T6vUtewHgXG07yG5QJlM/NRZZvhKAA0Sri4uLWCEQOHQpvMZW4qeMRa8Hq31ilOC6B/2P8K8AAMte2VP1/HMkAAAAASUVORK5CYII=");}
+
+
+
 .bounce {
 		position:absolute;
 		top:500px;
@@ -400,14 +408,20 @@ alert("How to play Sunshine Click.\n\r\n\rClick the Sunshine to collect sunshine
       onclddick="alert('hello');"> </img>
       <div type="text" onclickc="help()" STYLE="  " ID="SCORE" value="">
 </div>
-<div id="commands">
+
+
+ <div id="commands">
    <button id="workers" ONCLICK="buyautoclicks(this);" ontouchstart="return true;"
   style="border:3px none black;cursor:pointer;positdion:absolute;widdth:40%;height:auto; left:0%; -webkit-filter: grayscale(20%);z-indxex:601; color: blue;background-color:transparent;font-weight:bold; font-weight:bold;text-decoration:underline;">exchange</button>
     <button id="workers" ONCLICK="help(this);" ontouchstart="return true;"
   style="display:none;border:3px none black;cursor:pointer;position:absolute;width:30%;height:auto; left:40%; -webkit-filter: grayscale(20%);z-indxex:601; color: blue;background-color:transparent;font-weight:bold;font-weight:bold;top:0px;left:0px;display:none">help</button>
-  <button id="workers" ONCLICK="reset(this);" ontouchstart="return true;"
-  style="border:3px none black;cursor:pointer;positdion:absolute;widdth:30%;height:auto; left:70%; -webkit-filter: grayscale(20%);z-indxex:601; color: blue;background-color:transparent;font-weight:bold; font-weight:bold;text-decoration:underline;">reset</button><div style="width:100%;positiddon:absolute;bottom:-8%; font-size:10px;"><center> &copy; IAM 2015, All rights reserved. </center> </div>
+  <input type="button" id="reset" ONCLICK="reset(this);" ontouchstart="return true;"
+  style=""></input>
+  
+  <div style="width:100%;positiddon:absolute;bottom:-8%; font-size:10px;"><center> &copy; IAM 2015, All rights reserved. </center> </div>
 </div>
+
+
 <br>
 <center><small><b><small><a href="http://clickeuro.tk">ClickEuro</a></small></b></small></center>
 <center><small><b><small><a href="http://sunclick.tk">SunClick</a></small></b></small></center>
