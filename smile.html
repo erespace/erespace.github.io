@@ -52,7 +52,7 @@ background-image: url("data:image/gif;base64,R0lGODlhIAAgAPYAAAAAAAEBAQMDAwQEBAY
 		82% 	{ top:465px; -webkit-animation-timing-function:ease-in;  }
 		91% 	{ top:500px; -webkit-animation-timing-function:ease-out; }
 		96% 	{ top:490px; -webkit-animation-timing-function:ease-in;  }
-		100%	{ top:500px; }
+		100%	{ bottom:500px; }
 	}
 	@-moz-keyframes bounce {
 		0% 	{ top:000px; -moz-animation-timing-function:ease-in;  }
@@ -62,7 +62,7 @@ background-image: url("data:image/gif;base64,R0lGODlhIAAgAPYAAAAAAAEBAQMDAwQEBAY
 		82% 	{ top:465px; -moz-animation-timing-function:ease-in;  }
 		91% 	{ top:500px; -moz-animation-timing-function:ease-out; }
 		96% 	{ top:490px; -moz-animation-timing-function:ease-in;  }
-		100%	{ top:500px; }
+		100%	{ bottom:500px; }
 	}
 	@keyframes bounce {
 		0% 	{ top:000px; -moz-animation-timing-function:ease-in;  }
@@ -72,7 +72,7 @@ background-image: url("data:image/gif;base64,R0lGODlhIAAgAPYAAAAAAAEBAQMDAwQEBAY
 		82% 	{ top:465px; -moz-animation-timing-function:ease-in;  }
 		91% 	{ top:500px; -moz-animation-timing-function:ease-out; }
 		96% 	{ top:490px; -moz-animation-timing-function:ease-in;  }
-		100%	{ top:500px; }
+		100%	{ bottom:500px; }
 	}
 body {
 pointer-events:none
@@ -281,7 +281,7 @@ function create_rocket(value) {
   div.className = "rocket bounce";
   div.id = Number(n + right + topz);
   document.getElementById("div2").appendChild(div);
-/// setTimeout(function() {    remove_rocket(Number(n + right + topz));  }, 1000);
+setTimeout(function() {    remove_rocket(Number(n + right + topz));  }, 1000);
 }
 function create_info_rocket(value) {
   n = createGuid();
