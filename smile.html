@@ -266,8 +266,8 @@ function update_display() {
 }
 function create_rocket(value) {
   n = createGuid();
-  right = Math.floor((Math.random() * 70) + 1);
-  topz = -10;
+  //right = Math.floor((Math.random() * 70) + 1);
+  //topz = -10;
   var div = document.createElement("div");
   div.style.width = "auto";
   div.style.right = Number(right) + "%";
@@ -281,7 +281,7 @@ function create_rocket(value) {
   div.className = "rocket bounce";
   div.id = Number(n + right + topz);
   document.getElementById("div2").appendChild(div);
-///setTimeout(function() {    remove_rocket(Number(n + right + topz));  }, 1000);
+setTimeout(function() {    remove_rocket(Number(n + right + topz));  }, 1000);
 }
 function create_info_rocket(value) {
   n = createGuid();
