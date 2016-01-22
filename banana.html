@@ -393,7 +393,7 @@ function buyautoclicks(clicks) {
   if (bananas < newautoclickscost) {
     return create_info_rocket('Please click and collect atleast '+ format(Number(newautoclickscost).toFixed(2))+' banana/s.');
   }
-  if (confirm("Exchange " + newautoclickscost.toFixed(2) + " banana/s for 1 picker, which will pick: " + autoclicksrate.toFixed(2) + " banana/s every second for you\n\r\n\rYou currently have " + autoclicks + " banana picker/s, picking " + bananas_per_second.toFixed(2) + " banana/s per second.") == false) {
+  if (confirm("Exchange " + newautoclickscost.toFixed(2) + " banana/s for 1 picker, which will pick: " + autoclicksrate.toFixed(2) + " banana/s every second for you\n\r\n\rYou currently have " + autoclicks + " banana picker/s, picking " + autoclicksrate.toFixed(2) + " banana/s per second.") == false) {
     return false;
   }
   if (bananas < newautoclickscost) {
