@@ -261,9 +261,13 @@ function createGuid() {
 function update_display() {
   document.getElementById("SCORE").innerHTML = "<small>"+
     format(Number(bananas).toFixed(2)) + " EURO/S</small><br><small> <small>" + (Number(bananas_per_second) + Number(user_click_rate)).toFixed(2) + " <i> per second</i> </small></small>";
-  if (bananas_per_second > 0) {
-    create_rocket(Number(bananas_per_second).toFixed(2));
-  }
+     if (bananas_per_second > 0) {
+  for (i = 0; i < autoclicks; i++) {
+   
+    create_rocket(Number(autoclicksrate).toFixed(2));
+}
+}
+  
  // document.getElementById("GOLD").innerHTML =
     format(Number(goldcurrent).toFixed(2)) + "<small> <br>" + (Number(gold_per_second) + Number(gold_click_rate)).toFixed(2) + "/s</small>";
   window.document.title = Number(bananas).toFixed(2) + " euro/s - Click Euro ";
@@ -374,7 +378,7 @@ function buyautoclicks(clicks) {
   if (bananas < newautoclickscost) {
     return create_info_rocket('Please click and collect atleast '+ format(Number(newautoclickscost).toFixed(2))+' euro/s.');
   }
-  if (confirm("Exchange " + newautoclickscost.toFixed(2) + " euro/s for 1 picker, which will pick: " + autoclicksrate.toFixed(2) + " euro/s every second for you\n\r\n\rYou currently have " + autoclicks + " euro picker/s, picking " + bananas_per_second.toFixed(2) + " euro/s per second.") == false) {
+  if (confirm("Exchange " + newautoclickscost.toFixed(2) + " euro/s for 1 picker, which will pick: " + autoclicksrate.toFixed(2) + " euro/s every second for you\n\r\n\rYou currently have " + autoclicks + " euro picker/s, picking " + autoclicksrate.toFixed(2) + " euro/s per second each.") == false) {
     return false;
   }
   if (bananas < newautoclickscost) {
