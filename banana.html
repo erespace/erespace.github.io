@@ -272,7 +272,15 @@ function update_display() {
   document.getElementById("SCORE").innerHTML = "<small>"+
     format(Number(bananas).toFixed(2)) + " BANANA/S</small><br><small> <small>" + (Number(bananas_per_second) + Number(user_click_rate)).toFixed(2) + " <i> per second</i> </small></small>";
   if (bananas_per_second > 0) {
+  
+  amount_of_rockets = autoclicks/autoclicksrate;
+  
+  for (i = 0; i < amount_of_rockets; i++) {
+   
     create_rocket(Number(bananas_per_second).toFixed(2));
+}
+  
+ 
   }
  // document.getElementById("GOLD").innerHTML =
     format(Number(goldcurrent).toFixed(2)) + "<small> <br>" + (Number(gold_per_second) + Number(gold_click_rate)).toFixed(2) + "/s</small>";
