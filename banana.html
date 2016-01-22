@@ -222,7 +222,7 @@ localStorage.removeItem( 'game');
 }
 function open_game() {
 load_game = JSON.parse(localStorage.getItem( 'game'));
-  if (load_game) {
+  //if (load_game) {
    bananas = load_game.bananas;
    
     autoclicks = load_game.autoclicks;
@@ -235,7 +235,7 @@ newautoclickscost = load_game.newautoclickscost;
 newgoldcost = load_game.newgoldcost;
  bananas_per_second = load_game.bananas_per_second;
  gold_per_second = load_game.gold_per_second;
-  }
+ // }
 }
 function save_game() {
 //return true;
