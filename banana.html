@@ -273,7 +273,7 @@ function update_display() {
     format(Number(bananas).toFixed(2)) + " BANANA/S</small><br><small> <small>" + (Number(bananas_per_second) + Number(user_click_rate)).toFixed(2) + " <i> per second</i> </small></small>";
   if (bananas_per_second > 0) {
   
-  amount_of_rockets = autoclicks/autoclicksrate;
+  amount_of_rockets = autoclicks/bananas_per_second;
   
   for (i = 0; i < amount_of_rockets; i++) {
    
