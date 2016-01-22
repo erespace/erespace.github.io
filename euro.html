@@ -188,7 +188,7 @@ var gold_clicks = 0;
 var gold_click_rate = 0;
 var bananas_per_second = 0.00;
 var gold_per_second = 0.00;
-//open_game();
+open_game();
 function reset() {
   if (confirm("Are you sure you want to reset this game? (all euro/s and automatic euro pickers will be set to zero)") == false) {
     return false;
@@ -211,8 +211,9 @@ localStorage.removeItem( 'game');
   gold_per_second = 0.00;
 }
 function open_game() {
+if (typeof(Storage) !== "undefined") {
 load_game = JSON.parse(localStorage.getItem( 'game'));
-  if (load_game) {
+  //if (load_game) {
    bananas = load_game.bananas;
    
     autoclicks = load_game.autoclicks;
@@ -221,14 +222,15 @@ load_game = JSON.parse(localStorage.getItem( 'game'));
 newautoclickscost = load_game.newautoclickscost;
  goldcurrent = load_game.goldcurrent;
  goldrate = load_game.goldrate;
- originalgoldcost =jload_game.originalgoldcost;
+ originalgoldcost =load_game.originalgoldcost;
 newgoldcost = load_game.newgoldcost;
  bananas_per_second = load_game.bananas_per_second;
  gold_per_second = load_game.gold_per_second;
-  }
+ // }
+ }
 }
 function save_game() {
-return true;
+//return true;
 var game = {};
 game.bananas = bananas;
 game.autoclicks = autoclicks;
