@@ -286,11 +286,11 @@ function update_display() {
   if (bananas_per_second > 0) {
   
  
-  
-  for (i = 0; i < autoclicks; i++) {
+  amount = autoclicks * autocliksrate
+  //for (i = 0; i < autoclicks; i++) {
    
-    create_rocket(Number(autoclicksrate).toFixed(2));
-}
+    create_rocket(Number(amount).toFixed(2));
+//}
   
  
   }
