@@ -167,6 +167,16 @@ margin-bottom:2px;  Top:0%; position:relative;font-weight:bold;TEXT-ALIGN:center
   //text-shadow: 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px black, 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px green, 0 0 4px green, 0 0 4px green;
 }
 
+.info_rocket {
+  z-index: 700;
+  position: absolute;
+  font-size: 12px;
+  backgrou$$ncolor: black;
+  padding: 1%;
+  color:white;
+  //text-shadow: 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px black, 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px green, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px green, 0 0 4px green, 0 0 4px green;
+}
+
 #workers { 
 font-size: 18px;
 font-family:tahoma,"Palatino Linotype","Book Antiqua",Palatino,serif
@@ -320,15 +330,16 @@ function create_info_rocket(value) {
   topz = Math.floor((Math.random() * 150) + 10);
   var div = document.createElement("div");
   div.style.width = "auto";
-  div.style.right = Number(right) + "%";
-  div.style.top = Number(topz) + "%";
-  div.style.height = "auto";
+  //div.style.right = Number(right) + "%";
+  //div.style.top = Number(topz) + "%";
+    div.style.height = "auto";
+  div.style.width = "200px";
   div.style.background = "Yellow";
   div.style.color = "red";
   div.style.fontWeight = "bold";
 div.innerHTML = "+" + value;
   //div.innerHTML = "+" + value;
-  div.className = "rocket bounce";
+  div.className = "info_rocket";
   div.id = Number(n + right + topz);
   document.getElementById("div2").appendChild(div);
   setTimeout(function() {
