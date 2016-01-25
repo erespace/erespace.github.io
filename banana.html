@@ -274,7 +274,8 @@ function format(n) {
   }
 }
 function createGuid() {
-
+var d = new Date();
+var n = d.getTime(); 
 var ALPHABET = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 var ID_LENGTH = 8;
@@ -284,7 +285,7 @@ var generate = function() {
   for (var i = 0; i < ID_LENGTH; i++) {
     rtn += ALPHABET.charAt(Math.floor(Math.random() * ALPHABET.length));
   }
-  return rtn;
+  return rtn+n;
 }
 
   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxx'.replace(/[xy]/g, function(c) {
