@@ -228,40 +228,35 @@ localStorage.removeItem( 'game');
 function open_game() {
 //return true;
 if (typeof(Storage) !== "undefined") {
-load_game = JSON.parse(localStorage.getItem( 'game'));
-  //if (load_game) {
-   bananas = parseFloat(Number (load_game.bananas));
-   
-    autoclicks = parseFloat(Number (load_game.autoclicks));
-    autoclicksrate = parseFloat(Number (load_game.autoclicksrate));
-    originalautoclickscost = parseFloat(Number (load_game.orignalautoclickscost));
-newautoclickscost = parseFloat(Number (load_game.newautoclickscost));
- goldcurrent = parseFloat(Number (load_game.goldcurrent));
- goldrate = parseFloat(Number (load_game.goldrate));
- originalgoldcost =parseFloat(Number (load_game.originalgoldcost));
-newgoldcost = parseFloat(Number (load_game.newgoldcost));
- bananas_per_second = parseFloat(Number (load_game.bananas_per_second));
- gold_per_second = parseFloat(Number (load_game.gold_per_second));
- // }
+bananas = parseFloat(localStorage.getItem("bananas"));
+
+autoclicks = parseFloat(localStorage.getItem("autoclicks"));
+autoclicksrate = parseFloat(localStorage.getItem("autoclicksrate"));
+orignalautoclickscost = parseFloat(localStorage.getItem("orignalautoclickscost"));
+newautoclickscost = parseFloat(localStorage.getItem("newautoclickscost"));
+goldcurrent = parseFloat(localStorage.getItem("goldcurrent"));
+goldrate = parseFloat(localStorage.getItem("goldrate"));   
+originalgoldcost = parseFloat(localStorage.getItem("originalgoldcost"));   
+newgoldcost = parseFloat(localStorage.getItem("newgoldcost"));   
+bananas_per_second = parseFloat(localStorage.getItem("bananas_per_second"));   
+gold_per_second = parseFloat(localStorage.getItem("gold_per_second"));   
+    
  }
 }
 function save_game() {
 //return true;
-var game = {};
-game.bananas = parseFloat(bananas).toFixed(2);
-game.autoclicks = parseFloat(autoclicks).toFixed(2);
-game.autoclicksrate = parseFloat(autoclicksrate).toFixed(2);
-game.originalautoclickscost = parseFloat(originalautoclickscost).toFixed(2);
-game.newautoclickscost = parseFloat(newautoclickscost).toFixed(2);
-game.goldcurrent = parseFloat(goldcurrent).toFixed(2);
-game.goldrate = parseFloat(goldrate).toFixed(2);
-game.originalgoldcost = parseFloat(originalgoldcost).toFixed(2);
-game.newgoldcost = parseFloat(newgoldcost).toFixed(2);
-game.bananas_per_second = parseFloat(bananas_per_second).toFixed(2);
-game.gold_per_second = parseFloat(gold_per_second).toFixed(2);
-console.log( game );
-localStorage.setItem( 'game', JSON.stringify(game) );
-create_info_rocket('Auto Saved');
+localStorage.setItem("bananas", bananas);
+localStorage.setItem("autoclicks", autoclicks);
+localStorage.setItem("autoclicksrate", autoclicksrate);
+localStorage.setItem("originalclickscost", originalclickscost);
+localStorage.setItem("newautoclickscost", newautoclickscost);
+localStorage.setItem("goldcurrent", goldcurrent);
+localStorage.setItem("goldrate", goldrate);
+localStorage.setItem("originalgoldcost", originalgoldcost);
+localStorage.setItem("newgoldcost", newgoldcost);
+localStorage.setItem("bananas_per_second", bananas_per_second);
+localStorage.setItem("gold_per_second", gold_per_second);
+//create_info_rocket('Auto Saved');
 
 }
 function format(n) {
