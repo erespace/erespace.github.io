@@ -322,29 +322,17 @@ function create_rocket(value) {
   }, 1000);
 }
 function create_info_rocket(value) {
-
+document.getElementById("info").style.display = "";
 document.getElementById("info").innerHTML = value;
+remove_info("info");
 return false;
-  n = createGuid();
-  right = Math.floor((Math.random() * 30) + 1);
-  topz = Math.floor((Math.random() * 150) + 10);
-  var div = document.createElement("div");
-  div.style.width = "auto";
-  //div.style.right = Number(right) + "%";
-  //div.style.top = Number(topz) + "%";
-    div.style.height = "auto";
-  div.style.width = "200px";
-  div.style.background = "Yellow";
-  div.style.color = "red";
-  div.style.fontWeight = "bold";
-div.innerHTML = "+" + value;
-  //div.innerHTML = "+" + value;
-  div.className = "info_rocket";
-  div.id = Number(n + right + topz);
-  document.getElementById("div2").appendChild(div);
-  setTimeout(function() {
-    remove_rocket(Number(n + right + topz));
-  }, 1000);
+
+}
+
+function remove_info(id) {
+
+  var elem = document.getElementById(id);
+  elem.style.display="none";
 }
 function create_gold_rocket(value) {
   n = createGuid();
@@ -360,7 +348,7 @@ function create_gold_rocket(value) {
   div.style.fontWeight = "bold";
   //div.innerHTML = "<img src='"+  document.getElementById("banana").src+"' style='width:1vw;'>";
   div.className = "rocket bounce";
-  div.id = Number(n + left + topz);
+  div.id = Number(parseInt(n) + parseInt(left) + parseInt(topz));
   document.getElementById("div2").appendChild(div);
   setTimeout(function() {
     remove_rocket(Number(n + left + topz));
