@@ -322,13 +322,18 @@ function create_rocket(value) {
   }, 1000);
 }
 function create_info_rocket(value) {
-document.getElementById("info").style.visibility = "visible";
+open_info("info");
 document.getElementById("info").innerHTML = value;
 remove_info("info");
 return false;
 
 }
 
+function open_info(id) {
+
+  var elem = document.getElementById(id);
+  elem.style.visibility = "visible";
+}
 function remove_info(id) {
 
   var elem = document.getElementById(id);
