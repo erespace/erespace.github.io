@@ -322,7 +322,7 @@ function create_rocket(value) {
   }, 1000);
 }
 function create_info_rocket(value) {
-document.getElementById("info").style.visisbility = "visible";
+document.getElementById("info").style.visibility = "visible";
 document.getElementById("info").innerHTML = value;
 remove_info("info");
 return false;
@@ -332,7 +332,7 @@ return false;
 function remove_info(id) {
 
   var elem = document.getElementById(id);
-  elem.style.visisbility = "hidden";
+  elem.style.visibility = "hidden";
 }
 function create_gold_rocket(value) {
   n = createGuid();
