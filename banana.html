@@ -317,9 +317,7 @@ function update_display() {
  
 }
 function create_rocket(value) {
-
   n = createGuid();
- 
   right = Math.floor((Math.random() * 70) + 1);
   topz = -10;
   var div = document.createElement("div");
@@ -333,11 +331,11 @@ function create_rocket(value) {
    div.innerHTML = "<img src='"+ document.getElementById("banana").src+"' style='width:50px;'>" + value;
    //div.innerHTML = "<img src='"+ document.getElementById("banana").src+"' style='width:50px;'>";
   div.className = "rocket bounce";
-  div.id = n.toString()+right.toString()+topz.toString();
+  div.id = Number(n + right + topz);
   document.getElementById("div2").appendChild(div);
   setTimeout(function() {
-    remove_rocket(n.toString()+right.toString()+topz.toString());
-  }, 100);
+    remove_rocket(Number(n + right + topz));
+  }, 1000);
 }
 function create_info_rocket(value) {
 open_info("info");
