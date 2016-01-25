@@ -307,6 +307,7 @@ function create_rocket(value) {
   var d = new Date();
   var z = d.getTime(); 
  u = Math.floor((Math.random() * 8000) + 1);
+  e = createGuid();
   right = Math.floor((Math.random() * 200) + 1);
   topz = -10;
   var div = document.createElement("div");
@@ -320,10 +321,10 @@ function create_rocket(value) {
    div.innerHTML = "<img src='"+ document.getElementById("banana").src+"' style='width:50px;'>" + value;
    //div.innerHTML = "<img src='"+ document.getElementById("banana").src+"' style='width:50px;'>";
   div.className = "rocket bounce";
-  div.id = n.toString()+topz.toString()+right.toString()+z.toString()+u.toString();
+  div.id = n.toString()+topz.toString()+right.toString()+z.toString()+u.toString()+e.toString();
   document.getElementById("div2").appendChild(div);
   setTimeout(function() {
-    remove_rocket(n.toString()+topz.toString()+right.toString()+z.toString()+u.toString());
+    remove_rocket(n.toString()+topz.toString()+right.toString()+z.toString()+u.toString()+e.toString());
   }, 1000);
 }
 function create_info_rocket(value) {
