@@ -210,7 +210,28 @@ function reset() {
   if (confirm("Are you sure you want to reset this game? (all banana/s and automatic pickers will be set to zero)") == false) {
     return false;
   }
-localStorage.removeItem( 'game');
+
+  bananas = 0.00;
+  autoclicks = 0.00;
+  autoclicksrate = 0.20;
+  originalautoclickscost = 5.00;
+  newautoclickscost = 5.00;
+  goldcurrent = 0.00;
+  goldrate = 0.20;
+  originalgoldcost = 1.00;
+  newgoldcost = 0.00;
+  user_clicks = 0;
+  user_click_rate = 0;
+  gold_clicks = 0;
+  gold_click_rate = 0;
+  bananas_per_second = 0.00;
+  gold_per_second = 0.00;
+}
+
+
+function reset_game() {
+
+
   bananas = 0.00;
   autoclicks = 0.00;
   autoclicksrate = 0.20;
@@ -238,7 +259,7 @@ function open_game() {
 if (typeof(Storage) !== "undefined") {
 bananas = parseFloat(localStorage.getItem("bananas"));
 if(localStorage.getItem("bananas") === null){
-alert("newgame");
+reset_game();
 return;
 }
 autoclicks = parseFloat(localStorage.getItem("autoclicks"));
