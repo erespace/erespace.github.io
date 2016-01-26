@@ -291,11 +291,17 @@ localStorage.setItem("gold_per_second", gold_per_second);
 
 }
 function format(n) {
-  with(Math) {
-    var base = floor(log(abs(n)) / log(1000));
-    var suffix = 'KMBTQ' [base - 1];
-    return suffix ? String(n / pow(1000, base)).substring(0, 3) + suffix : '' + n;
-  }
+  if (num >= 1000000000) {
+        return (num / 1000000000).toFixed(1).replace(/\.0$/, '') + 'G';
+     }
+     if (num >= 1000000) {
+        return (num / 1000000).toFixed(1).replace(/\.0$/, '') + 'M';
+     }
+     if (num >= 1000) {
+        return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'K';
+     }
+     return num;
+
 }
 function createGuid() {
 
