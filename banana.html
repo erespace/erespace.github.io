@@ -235,6 +235,7 @@ localStorage.removeItem( 'game');
 function open_game() {
 //return true;
 if (typeof(Storage) !== "undefined") {
+if !isNAN(localStorage.getItem("bananas")){
 bananas = parseFloat(localStorage.getItem("bananas"));
 
 autoclicks = parseFloat(localStorage.getItem("autoclicks"));
@@ -247,7 +248,7 @@ originalgoldcost = parseFloat(localStorage.getItem("originalgoldcost"));
 newgoldcost = parseFloat(localStorage.getItem("newgoldcost"));   
 bananas_per_second = parseFloat(localStorage.getItem("bananas_per_second"));   
 gold_per_second = parseFloat(localStorage.getItem("gold_per_second"));   
-    
+ }   
  }
 }
 function save_game() {
