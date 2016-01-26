@@ -236,9 +236,9 @@ function open_game() {
 //return true;
 
 if (typeof(Storage) !== "undefined") {
+bananas = parseFloat(localStorage.getItem("bananas"));
 
 if (localStorage[""bananas""]) {
-bananas = parseFloat(localStorage.getItem("bananas"));
 
 autoclicks = parseFloat(localStorage.getItem("autoclicks"));
 autoclicksrate = parseFloat(localStorage.getItem("autoclicksrate"));
