@@ -238,8 +238,8 @@ function open_game() {
 if (typeof(Storage) !== "undefined") {
 bananas = parseFloat(localStorage.getItem("bananas"));
 
-if (localStorage[""bananas""]) {
-
+if (bananas != null || items.length != 0){
+alert("saved");
 autoclicks = parseFloat(localStorage.getItem("autoclicks"));
 autoclicksrate = parseFloat(localStorage.getItem("autoclicksrate"));
 orignalautoclickscost = parseFloat(localStorage.getItem("orignalautoclickscost"));
