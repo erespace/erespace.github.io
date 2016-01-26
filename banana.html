@@ -6,7 +6,7 @@
 
   <!--
 Code and graphics copyright IAM ERE CHRIST -- erespace@gmail.com, 2015-2016
-Feel free to alter this code to your liking, but please do not re-host it, do not profit from it and do not present it as your own.
+please do not re-host it, do not profit from it and do not present it as your own.
 --!>
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui' name='viewport' />
@@ -291,20 +291,29 @@ localStorage.setItem("gold_per_second", gold_per_second);
 
 }
 function format(n) {
-var si = [
-    { value: 1E18, symbol: "E" },
-    { value: 1E15, symbol: "P" },
-    { value: 1E12, symbol: "T" },
-    { value: 1E9,  symbol: "G" },
-    { value: 1E6,  symbol: "M" },
-    { value: 1E3,  symbol: "k" }
-  ], i;
-  for (i = 0; i < si.length; i++) {
-    if (num >= si[i].value) {
-      return (num / si[i].value).toFixed(digits).replace(/\.0+$|(\.[0-9]*[1-9])0+$/, "$1") + si[i].symbol;
+    var thousand = 1000;
+    var million = 1000000;
+    var billion = 1000000000;
+    var trillion = 1000000000000;
+    if (value < thousand) {
+        return String(value);   
     }
-  }
-  return num.toString();
+    
+    if (value >= thousand && value <= 1000000) {
+         return  Math.round(value/thousand) + 'k';   
+    }
+    
+    if (value >= million && value <= billion) {
+        return Math.round(value/million) + 'M';   
+    }
+    
+    if (value >= billion && value <= trillion) {
+        return Math.round(value/billion) + 'B';   
+    }
+    
+    else {
+        return Math.round(value/trillion) + 'T';   
+    }
 }
 function createGuid() {
 
