@@ -222,6 +222,10 @@ function reset() {
   autoclicksrate = 0.20;
   originalautoclickscost = 5.00;
   newautoclickscost = 5.00;
+   originalmulticost = 5000.00;
+  newmulticost = 5000.00;
+  automulti = 0.00;
+  
   goldcurrent = 0.00;
   goldrate = 0.20;
   originalgoldcost = 1.00;
@@ -245,6 +249,11 @@ function reset_game() {
   autoclicksrate = 0.20;
   originalautoclickscost = 5.00;
   newautoclickscost = 5.00;
+  originalmulticost = 5000.00;
+  newmulticost = 5000.00;
+  automulti = 0.00;
+  
+  
   goldcurrent = 0.00;
   goldrate = 0.20;
   originalgoldcost = 1.00;
@@ -276,6 +285,14 @@ autoclicks = parseFloat(localStorage.getItem("autoclicks"));
 autoclicksrate = parseFloat(localStorage.getItem("autoclicksrate"));
 orignalautoclickscost = parseFloat(localStorage.getItem("orignalautoclickscost"));
 newautoclickscost = parseFloat(localStorage.getItem("newautoclickscost"));
+
+
+originalmulticost = parseFloat(localStorage.getItem("originalmulticost"));
+newmulticost = parseFloat(localStorage.getItem("newmulticost"));
+automulti = parseFloat(localStorage.getItem("automulti"));
+
+
+
 goldcurrent = parseFloat(localStorage.getItem("goldcurrent"));
 goldrate = parseFloat(localStorage.getItem("goldrate"));   
 originalgoldcost = parseFloat(localStorage.getItem("originalgoldcost"));   
@@ -295,6 +312,15 @@ localStorage.setItem("autoclicks", autoclicks);
 localStorage.setItem("autoclicksrate", autoclicksrate);
 localStorage.setItem("originalautoclickscost", originalautoclickscost);
 localStorage.setItem("newautoclickscost", newautoclickscost);
+
+localStorage.setItem("originalmulticost", originalmulticost);
+localStorage.setItem("newmulticost", newmulticost);
+localStorage.setItem("automulti", automulti);
+
+
+
+
+
 localStorage.setItem("goldcurrent", goldcurrent);
 localStorage.setItem("goldrate", goldrate);
 localStorage.setItem("originalgoldcost", originalgoldcost);
@@ -481,6 +507,36 @@ function exchangegold(elem) {
     update_display();
   }
 }
+
+function buymulti(){
+
+   if (bananas < newmulticost) {
+    return create_info_rocket('Please click and collect atleast '+ format(Number(newmulticost).toFixed(2))+' banana/s.');
+  }
+  if (confirm("Exchange " + parseFloat(newmulticost).toFixed(2) + " banana/s to multiply the clickrate x2\n\r\n\rYou currently have " + parseFloat(automulti) + " ") == false) {
+   return false;
+  }
+  if (bananas < newmulticost) {
+    return create_info_rocket('Please click and collect more banana/s.');
+  } else {
+  automulti++;
+  autoclicksrate = autoclicksrate * 2;
+  newmulticost = originalmulticost * Math.pow(automulti, 1.14);
+    update_display();
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
 function buyautoclicks(clicks) {
   bananas_per_second = autoclicks * autoclicksrate;
   if (bananas < newautoclickscost) {
