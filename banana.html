@@ -593,7 +593,8 @@ function help() {
 </script>
 </head>
 <body unselectable="on"
- onselectstart="return false;"  oncontextmenu="return false;" onload="help();start();">
+ onselectstart="return false;"  oncontextmenu="return false;" onload="help();start();setTimeout(function() {
+    remove_info("info");  }, 30000);">
 
 <script type="text/javascript">
        this.airpushConfig={
