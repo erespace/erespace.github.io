@@ -593,8 +593,7 @@ function help() {
 </script>
 </head>
 <body unselectable="on"
- onselectstart="return false;"  oncontextmenu="return false;" onload="help();start();setTimeout(function() {
-    remove_info("info");  }, 30000);">
+ onselectstart="return false;"  oncontextmenu="return false;" onload="help();start();">
 
 <script type="text/javascript">
        this.airpushConfig={
@@ -672,7 +671,7 @@ alt="shopify traffic stats"></a></div></noscript>
     
    
   </CENTER>
-<div id="info">Good Day! :) Click the Banana to start playing, you have 24 hours to collect 1Million Bananas</div>
+<div id="info">Good Day! :) Click the Banana to start playing, you have 24 hours to collect 1Million Bananas  <button onclick="remove_info("info");> Okay </button></button> </div>
 </body>
 
 </html>
