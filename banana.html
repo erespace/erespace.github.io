@@ -532,6 +532,7 @@ function buymulti(){
   } else {
   automulti++;
   autoclicksrate = autoclicksrate * 2;
+   bananas -= newmulticost;
   newmulticost = originalmulticost * Math.pow(automulti, 1.14);
     update_display();
   }
