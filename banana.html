@@ -210,6 +210,7 @@ var gold_clicks = 0;
 var gold_click_rate = 0;
 var bananas_per_second = 0.00;
 var gold_per_second = 0.00;
+var upgradeTime = 86400;
 open_game();
 function reset() {
   if (confirm("Are you sure you want to reset this game? (all banana/s and automatic pickers will be set to zero)") == false) {
@@ -231,6 +232,8 @@ function reset() {
   gold_click_rate = 0;
   bananas_per_second = 0.00;
   gold_per_second = 0.00;
+  upgradeTime = 86400;
+seconds = upgradeTime;
 }
 
 
@@ -252,6 +255,8 @@ function reset_game() {
   gold_click_rate = 0;
   bananas_per_second = 0.00;
   gold_per_second = 0.00;
+  upgradeTime = 86400;
+ seconds = upgradeTime;
 }
 
 
@@ -276,7 +281,11 @@ goldrate = parseFloat(localStorage.getItem("goldrate"));
 originalgoldcost = parseFloat(localStorage.getItem("originalgoldcost"));   
 newgoldcost = parseFloat(localStorage.getItem("newgoldcost"));   
 bananas_per_second = parseFloat(localStorage.getItem("bananas_per_second"));   
-gold_per_second = parseFloat(localStorage.getItem("gold_per_second"));   
+gold_per_second = parseFloat(localStorage.getItem("gold_per_second")); 
+
+
+upgradeTime = parseFloat(localStorage.getItem("upgradeTime"));  
+seconds = upgradeTime;
  }
 }
 function save_game() {
@@ -292,12 +301,13 @@ localStorage.setItem("originalgoldcost", originalgoldcost);
 localStorage.setItem("newgoldcost", newgoldcost);
 localStorage.setItem("bananas_per_second", bananas_per_second);
 localStorage.setItem("gold_per_second", gold_per_second);
+localStorage.setItem("upgradeTime", seconds);
 //create_info_rocket('Auto Saved');
 
 }
 
-var upgradeTime = 86400;
-var seconds = upgradeTime;
+
+
 function timer() {
     var days        = Math.floor(seconds/24/60/60);
     var hoursLeft   = Math.floor((seconds) - (days*86400));
@@ -496,10 +506,10 @@ function open_help(){
 document.getElementById("help").style.display= "";
 }
 function start() {
-var countdownTimer = setInterval('timer()', 1000);
+
 document.body.addEventListener('touchstart', function() {}, false);
   var counter = setInterval(ripen_banana, 1000);
-  
+  var countdownTimer = setInterval('timer()', 1000);
 }
 function help() {
 //alert("How to play Banana Click.\n\r\n\rYou have 24 hours to collect 1M bananas.\n\r\n\rClick the banana to collect banana/s.\n\r\n\rClick the Exchange button to exchange banana/s for upgrades.")
