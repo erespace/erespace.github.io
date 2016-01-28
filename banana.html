@@ -527,7 +527,7 @@ function buymulti(){
    if (bananas < newmulticost) {
     return create_info_rocket('Please click and collect atleast '+ format(Number(newmulticost).toFixed(2))+' banana/s, to muliply the click rate by 2.');
   }
-  if (confirm("Exchange " + parseFloat(newmulticost).toFixed(2) + " banana/s to multiply the clickrate x2\n\r\n\rYou currently have " + parseFloat(automulti) + " multipling the click rate by "+parseFloat(autoclicksrate)+""" ) == false) {
+  if (confirm("Exchange " + parseFloat(newmulticost).toFixed(2) + " banana/s to multiply the clickrate x2\n\r\n\rYou currently have " + parseFloat(automulti) + " multipling the click rate by "+parseFloat(autoclicksrate) ) == false) {
    return false;
   }
   if (bananas < newmulticost) {
