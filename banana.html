@@ -402,7 +402,7 @@ function createGuid() {
 }
 function update_display() {
   document.getElementById("SCORE").innerHTML = "<small>"+
-    format(Number(bananas).toFixed(2)) + " BANANA/S</small><br><small> <small>" + format((Number(bananas_per_second) + Number(user_click_rate)).toFixed(2)) + " <i> per second</i> </small></small>";
+    format(Number(bananas).toFixed(2)) + " BANANA/S</small><br><small> <small>" + (Number(bananas_per_second) + Number(user_click_rate)).toFixed(2) + " <i> per second</i> </small></small>";
   if (bananas_per_second > 0) {
   
  
@@ -629,7 +629,7 @@ function help() {
 <div id="commands">
   
   <input type="button" id="exchange" ONCLICK="buyautoclicks(this);" ontouchstart="return true;"
-  style="">Auto</input>
+  style=""></input>
   
   <input type="button" id="multi" ONCLICK="buymulti(this);" ontouchstart="return true;"
   style=""></input>
