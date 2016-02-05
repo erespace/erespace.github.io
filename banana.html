@@ -402,7 +402,7 @@ function createGuid() {
 }
 function update_display() {
   document.getElementById("SCORE").innerHTML = "<small>"+
-    Number(bananas).toFixed(2) + " BANANA/S</small><br><small> <small>" + (Number(bananas_per_second) + Number(user_click_rate)).toFixed(2) + " <i> per second</i> </small></small>";
+    format(Number(bananas).toFixed(2)) + " BANANA/S</small><br><small> <small>" + format((Number(bananas_per_second) + Number(user_click_rate)).toFixed(2)) + " <i> per second</i> </small></small>";
   if (bananas_per_second > 0) {
   
  
