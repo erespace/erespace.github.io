@@ -161,9 +161,15 @@
 	}
 	function ABOUT(){
 	
-	alert("Welcome to the Oblique Anamorphic Image Converter.\n\nThis program is intended to convert images from one perspective to another which are to be viewed at 45 degree angle.\n\nPlease contact erespace@gmail.com , if you have any questions regarding this programs use.\n\nThis program is copyright Iam Ere 26/9/2015, all rights reserved.");
+	//alert("Welcome to the Oblique Anamorphic Image Converter.\n\nThis program is intended to convert images from one perspective to another which are to be viewed at 45 degree angle.\n\nPlease contact erespace@gmail.com , if you have any questions regarding this programs use.\n\nThis program is copyright Iam Ere 26/9/2015, all rights reserved.");
+
+	 
+	  document.getElementById('popUpDiv').style.display=" ";
+	  
+	  
+	  }
 	
-	}
+
 	
 	window.addEventListener("deviceorientation", findNorth);
 	 function findNorth(evt) {
@@ -177,10 +183,19 @@
 	 div.style.oTransform = 'rotate('+deg+'deg)'; 
 	 div.style.transform = 'rotate('+deg+'deg)'; 
 	 }
+	 
+	 function close_pop(){
+	 
+	  document.getElementById('popUpDiv').style.display="none";
+	  
+	  
+	  }
+	 
+	 
 	 </script>
 	
 	</head>
-	<body onload="ABOUT();" >
+	<body  >
 	 
 	<div id="div1">
 	
@@ -197,7 +212,7 @@
 	
 	
 	
-	 <div id="tools" style=" position:relative;margin-top:60px;display:none;padding-left:1%; bottom:6%;width:595px; font-size:25px;display:block;overflow:hidden;text-align:center;">Oblique Anamorphic Image Converter&nbsp;<br><input onchange="previewImage(this);" type="file" style="font-size:13px" name="file_choose_take" Value="Choose Image" id="file_choose_take" class="myButton" accept="image/pjpeg;image/jpeg ;video/mp4 ;video/3gpp ;capture=camera;camcorder"><button onclick="ABOUT();">ABOUT</button></small></div>
+	 <div id="tools" style=" position:relative;margin-top:60px;display:none;padding-left:1%; bottom:6%;width:595px; font-size:25px;display:block;overflow:hidden;text-align:center;"><input onchange="previewImage(this);" type="file" style="font-size:13px" name="file_choose_take" Value="Choose Image" id="file_choose_take" class="myButton" accept="image/pjpeg;image/jpeg ;video/mp4 ;video/3gpp ;capture=camera;camcorder"><button onclick="ABOUT();">ABOUT</button></small></div>
 	
 	
 	
@@ -208,12 +223,15 @@
 	<div style="display:none;position:absolute;bottom:0px;width:100%;font-family:tahoma;"><center ><small><small>&copy Iam Ere 18/8/2015</small></small></center></div>
 	
 	<div id="popUpDiv">
-	<h2>Welcome to the Oblique Anamorphic Image Converter.</h2><br><br>
+	<h3> Oblique Anamorphic Image Converter.</h3><br><br>
 
-This program is intended to convert images from one perspective to another which are to be viewed at 45 degree angle.<br>
+This program is intended to convert images from one perspective to another which are to be viewed at 45 degree angle.<br><br>
 
 
 Please contact erespace@gmail.com , if you have any questions regarding this programs use. <br><br>&copy; IAM 26/9/2015, all rights reserved.
+
+<br><br>
+<button onclick="close_pop();">Close</button>
 	</div>
 	
 	
