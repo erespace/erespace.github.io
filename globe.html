@@ -50,7 +50,14 @@
 	border:0px solid black;
 	 
 	}
-	
+#popUpDiv {
+	position:absolute;
+	background:url(pop-back.jpg) no-repeat;
+	width:400px;
+	height:400px;
+	border:5px solid #000;
+	z-index: 9002;
+}	
 	
 	
 	#div1 {
@@ -197,6 +204,13 @@
 	 <div style=" display:none;position:fixed;padding-left:1%; bottom:1%;width:595px; font-size:25px;position:absolute;overflow:hidden;text-align:center;">&nbsp;<button onclick="PRINT_THIS();">PRINT</button>&nbsp;<button onclick="ABOUT();">ABOUT</button>&nbsp;<button onclick="changeclass('rotateleft');">LEFT</button>&nbsp;<button onclick="changeclass('rotateright');">RIGHT</button>&nbsp;<button onclick="changeclass('upsidedown');">Upside</button>&nbsp;<button onclick="changeclass('rightside');">Correct</button><center>
 	 </div>
 	<div style="display:none;position:absolute;bottom:0px;width:100%;font-family:tahoma;"><center ><small><small>&copy Iam Ere 18/8/2015</small></small></center></div>
+	
+	<div id="popUpDiv">
+	
+	</div>
+	
+	
+
 	</body>
 	
 	</html>
