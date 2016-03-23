@@ -20,7 +20,7 @@
 	
 
     /***FIRST STYLE THE BUTTON***/
-    button#gobutton{
+    input#gobutton{
     cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
     padding:5px 25px; /*add some padding to the inside of the button*/
    background:lightgrey; /*the colour of the button*/
@@ -38,7 +38,7 @@
     font-size:12px;;
     }
     /***NOW STYLE THE BUTTON'S HOVER AND FOCUS STATES***/
-    button#gobutton:hover, input#gobutton:focus{
+    input#gobutton:hover, input#gobutton:focus{
     background-color :grey; /*make the background a little darker*/
     /*reduce the drop shadow size to give a pushed button effect*/
     -webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
@@ -271,7 +271,7 @@ button#gobutton2{
 	
 	
 	
-	 <div id="tools" style="bottom:6%;width:595px; font-size:25px;display:block;overflow:hidden;text-align:center;"><input onchange="previewImage(this);" type="file" style="font-size:13px" name="file_choose_take" Value="Choose Image" id="file_choose_take" class="myButton" accept="image/pjpeg;image/jpeg ;video/mp4 ;video/3gpp ;capture=camera;camcorder"><button onclick="ABOUT();">ABOUT</button></small></div>
+	 <div id="tools" style="bottom:6%;width:595px; font-size:25px;display:block;overflow:hidden;text-align:center;"><button onclick="ABOUT();">ABOUT</button></small></div>
 	
 	
 	
@@ -298,10 +298,9 @@ This application is to aid in the anamorphic transformation of images, which are
 * Greeting Cards<br>
 * Promotional Literature<br>
 <br>
+<input id="gobutton" onchange="previewImage(this);close_pop()" type="file" style="font-size:13px" name="file_choose_take" Value="Choose Image" id="file_choose_take" class="myButton" accept="image/pjpeg;image/jpeg ;video/mp4 ;video/3gpp ;capture=camera;camcorder">
 
-Please email erespace@gmail.com for assistance. 
-
-<br><br>&copy; IAM 26/9/2015, all rights reserved.
+<br><br><small>&copy; IAM 26/9/2015, all rights reserved.</small>
 
 <br><br>
 <center><button id="gobutton" onclick="close_pop();">Close this window!</button></center><br><br>
