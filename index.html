@@ -18,7 +18,31 @@
 	
 	<style>
 	
-
+  input#gobutton2{
+    cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+    padding:5px 25px; /*add some padding to the inside of the button*/
+    background:lightgrey; /*the colour of the button*/
+    border:1px solid #33842a; /*required or the default border for the browser will appear*/
+    /*give the button curved corners, alter the size as required*/
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    /*give the button a drop shadow*/
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+    -moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+    box-shadow: 0 0 4px rgba(0,0,0, .75);
+    /*style the text*/
+    color:#f3f3f3;
+    font-size:12px;
+    }
+    /***NOW STYLE THE BUTTON'S HOVER AND FOCUS STATES***/
+    input#gobutton:hover, input#gobutton:focus{
+    background-color :#399630; /*make the background a little darker*/
+    /*reduce the drop shadow size to give a pushed button effect*/
+    -webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
+    -moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+    box-shadow: 0 0 1px rgba(0,0,0, .75);
+    }
     /***FIRST STYLE THE BUTTON***/
     button#gobutton{
     cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
@@ -218,31 +242,10 @@
 	 
 	  document.getElementById('popUpDiv').style.display="none";
 	  
-	  
-	  }
-	 
-	 
-	 </script>
-	
-	</head>
-	<body  >
-	 
-	<div id="div1">
-	
-	 <div id="div2">
-	 
-	
-	 
-	
-	
-	<img id="preview" src="http://s13.postimg.org/xzxq12uyv/triangle.gif">
-	
-	</div>
-	</div>
 	
 	
 	
-	 <div id="tools" style="bottom:6%;width:595px; font-size:25px;display:block;overflow:hidden;text-align:center;"><input onchange="previewImage(this);" type="file" style="font-size:13px" name="file_choose_take" Value="Choose Image" id="file_choose_take" class="myButton" accept="image/pjpeg;image/jpeg ;video/mp4 ;video/3gpp ;capture=camera;camcorder"><button onclick="ABOUT();">ABOUT</button></small></div>
+	 <div id="tools" style="bottom:6%;width:595px; font-size:25px;display:block;overflow:hidden;text-align:center;"><input id="gobutton2" onchange="previewImage(this);" type="file" style="font-size:13px" name="file_choose_take" Value="Choose Image" id="file_choose_take" class="myButton" accept="image/pjpeg;image/jpeg ;video/mp4 ;video/3gpp ;capture=camera;camcorder"><button id="gobutton" onclick="ABOUT();">ABOUT</button></small></div>
 	
 	
 	
@@ -263,7 +266,9 @@ This application is to aid in the anamorphic transformation of images, which are
 * Advertising<br>
 <br>
 
-Please contact erespace@gmail.com , in regards to this application. <br><br><center>&copy; IAM 26/9/2015, all rights reserved.</center>
+Please email erespace@gmail.com for assistance. 
+
+<br><br>&copy; IAM 26/9/2015, all rights reserved.
 
 <br><br>
 <center><button id="gobutton" onclick="close_pop();">Close this window!</button></center>
