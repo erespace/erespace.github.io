@@ -25,7 +25,7 @@ initial-scale=0; maximum-scale=0; user-scalable=0;"
   <script>
 
  var count=60;
-var score= 0;
+var score_amount= 0;
 
 
 function ripen(){
@@ -120,18 +120,17 @@ location.reload();
 
   //elem.style.display="none";
 
-    current_score = score;
+    current_score = score_amount;
 
     new_current_score = current_score+1;
 
 
 
-    score = new_current_score;
+    score_amount = new_current_score;
 
 
-    current_score = score;
 
- document.getElementById("SCORE").value=score;
+ document.getElementById("SCORE").value=score_amount;
    /// if(current_score>40){
 
 
