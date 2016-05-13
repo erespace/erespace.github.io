@@ -74,7 +74,7 @@ function timer()
   {
 
   alert("Game over. You  clicked: "+
-document.getElementById('SCORE').value+" Bananas. Well done" );
+score+" Bananas. Well done" );
 location.reload();
 
 
@@ -89,6 +89,8 @@ location.reload();
 
 
  document.getElementById("TIMER").value=count;
+ 
+ document.getElementById("SCORE").value=score;
 
 }
 
@@ -117,7 +119,7 @@ location.reload();
 
   //elem.style.display="none";
 
-    current_score = parseInt(document.getElementById('SCORE').value);
+    current_score = parseInt(score);
 
     new_current_score = current_score+1;
 
