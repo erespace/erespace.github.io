@@ -32,14 +32,6 @@ function ripen(){
 
 
 
-  random_banana = Math.floor((Math.random()*8)+1);
-//if(random_banana<=6){
-//if(document.getElementById(random_banana+"banana").className!="BNW"){
-//document.getElementById(random_banana+"banana").className="BNW";}else{
-
-//document.getElementById(random_banana+"banana").className="";
-//}
-///  }
   random_banana = Math.floor((Math.random()*6)+1);
 
 if(document.getElementById(random_banana+"banana").className!="BNW"){
@@ -74,7 +66,7 @@ function timer()
   {
 
   alert("Game over. You  clicked: "+
-score+" Bananas. Well done" );
+score_amount+" Bananas. Well done" );
 location.reload();
 
 
