@@ -90,7 +90,6 @@ location.reload();
 
  document.getElementById("TIMER").value=count;
  
- document.getElementById("SCORE").value=score;
 
 }
 
@@ -119,7 +118,7 @@ location.reload();
 
   //elem.style.display="none";
 
-    current_score = parseInt(score);
+    current_score = score;
 
     new_current_score = current_score+1;
 
@@ -128,8 +127,9 @@ location.reload();
     score = new_current_score;
 
 
-    current_score = parseInt(score);
+    current_score = score;
 
+ document.getElementById("SCORE").value=score;
    /// if(current_score>40){
 
 
