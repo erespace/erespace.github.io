@@ -33,7 +33,21 @@ function ripen(){
 
 
   random_banana = Math.floor((Math.random()*6)+1);
+document.getElementById('1banana').className = "";
 
+document.getElementById('2banana').className = "";
+
+
+document.getElementById('3banana').className = "";
+
+
+document.getElementById('4banana').className = "";
+
+
+document.getElementById('5banana').className = "";
+
+
+document.getElementById('6banana').className = "";
 if(document.getElementById(random_banana+"banana").className!="BNW"){
 document.getElementById(random_banana+"banana").className="BNW";
 
@@ -119,6 +133,7 @@ location.reload();
 
 
     score_amount = new_current_score;
+
 
 
 
@@ -417,7 +432,7 @@ img.BNW:hover {
 
 
   <font style=";POSITION:ABSOLUTE; left:0%;top:1%;FONT-WEIGHT:BOLD;
-font-size:48px;COLOR:black;">#BLACK_BANANA</font>
+font-size:48px;COLOR:black;width:100%;text-align:center">#BLACK_BANANA</font>
 
 
 
