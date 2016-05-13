@@ -62,7 +62,35 @@ document.getElementById(random_banana+"banana").className="";
 }
   }
 
+function hide_bananas(how){
+  document.getElementById('1banana').style.display = "none";
 
+document.getElementById('2banana').style.display = "none";
+document.getElementById('3banana').style.display = "none";
+
+document.getElementById('4banana').style.display = "none";
+document.getElementById('5banana').style.display = "none";
+document.getElementById('6banana').style.display = "none";
+
+
+  
+  
+}
+
+function show_bananas(how){
+  document.getElementById('1banana').style.display = "";
+
+document.getElementById('2banana').style.display = "";
+document.getElementById('3banana').style.display = "";
+
+document.getElementById('4banana').style.display = "";
+document.getElementById('5banana').style.display = "";
+document.getElementById('6banana').style.display = "";
+
+
+  
+  
+}
 
 function timer()
 
@@ -79,11 +107,20 @@ function timer()
 
   {
 
- document.getElementById("TIMER").innerHTML="Game Over. You scored: "+score_amount+" Bananas. Well done.";
+ document.getElementById("TIMER").innerHTML="";
 document.getElementById("SCORE").innerHTML="";
+hide_bananas();
+ document.getElementById("SCORENOTICE").innerHTML="Game over. You scored "+score_amount+" Bananas, Would you like to play again?<br><font color=red>YES/NO</font>";
+
+
 clearInterval(counter);
      
      clearInterval(ripencounter);
+
+  
+  
+ 
+
 
 ///location.reload();
 
@@ -453,6 +490,8 @@ none;background-color:white;border:1px solid white;font-family: 'Permanent Marke
 FONT-SIZE:1vw;FONT-WEIGHT:BOLD; COLOR:blue;;width:74%; border:0px
 none;background-color:white;border:1px solid white;font-family: 'Permanent Marker', cursive;" ID="TIMER" value="60">*Click on only the black bananas</font>
 
+
+<font selectable="false" readonly="readonly" disabled="true" style="position: absolute; left: 1%; bottom: 42%; font-weight: bold; color: grey; background-color: white; border: 1px solid white; font-family: &quot;Permanent Marker&quot;,cursive; font-size: 2vw; width: 100%;" id="SCORENOTICE" value="60"></font>
 
 
 
