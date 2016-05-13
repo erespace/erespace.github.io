@@ -79,8 +79,9 @@ function timer()
 
   {
 
-  alert("Game over. You  clicked: "+
-score_amount+" Bananas. Well done" );
+ document.getElementById("TIMER").innerHTML="Game Over. You scored: "+score_amount+" Bananas. Well done.";
+document.getElementById("SCORE").innerHTML="";
+
 location.reload();
 
 
