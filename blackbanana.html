@@ -19,7 +19,15 @@
 
   <script>
 
-lockedAllowed = window.screen.lockOrientation(orientation);
+screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+
+if (screen.lockOrientationUniversal("portrait-primary")) {
+  // orientation was locked
+} else {
+  // orientation lock failed
+}
+
+
 
  var count=60;
 var score_amount= 0;
