@@ -199,8 +199,9 @@ input#gobutton2{
 	<script>
 	 function create(){
 	alert("hello");
-	 //var redirect_path = window.location.pathname;
-	 //window.href=redirect_path+document.getElementById("new_viral").value;
+	 var redirect_path = window.location.pathname;
+	 alert(redirect_path);
+	 window.location=redirect_path+document.getElementById("new_viral").value;
 	 
 	 }
 	 function start(){
