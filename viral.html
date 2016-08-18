@@ -232,8 +232,13 @@ http.send(params);
 	 document.getElementById("subject").innerHTML=subject;
 	 
 	 document.title="somethingviral - "+subject;
-	 store_value(counter, window_url);
-	 store_value(counter+"subject", subject);
+	 store_value(counter, subject);
+	 if(counter>5){
+	 var counter = 1;
+	 }else{
+	 var counter = counter +1;
+	 }
+	 store_value("counter", counter);
 	 }
 	 
 	 </script>
