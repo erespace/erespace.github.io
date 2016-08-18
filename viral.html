@@ -198,7 +198,25 @@ input#gobutton2{
 	</style>
 	<script>
 	
+function store_value(name, data){
 
+var url = "http://www.appinvtinywebdb.appspot.com/storeavalue";
+var params = "tag="+name+"&value="+data;
+http.open("POST", url, true);
+
+//Send the proper header information along with the request
+http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+http.setRequestHeader("Content-length", params.length);
+http.setRequestHeader("Connection", "close");
+
+http.onreadystatechange = function() {//Call a function when the state changes.
+	if(http.readyState == 4 && http.status == 200) {
+		alert(http.responseText);
+	}
+}
+http.send(params);
+
+}
 
 	
 	 function create(){
@@ -207,13 +225,15 @@ input#gobutton2{
 	 
 	 }
 	 function start(){
-	 
+	 var counter = 1;
 	 var subjectmatter = window.location.search;
 	 var window_url=window.location;
 	 var subject = subjectmatter.substr(1);
 	 document.getElementById("subject").innerHTML=subject;
 	 
 	 document.title="somethingviral - "+subject;
+	 store_value(counter, window_url);
+	 store_value(counter+"subject", subject);
 	 }
 	 
 	 </script>
