@@ -197,6 +197,10 @@ input#gobutton2{
 	
 	</style>
 	<script>
+	
+
+
+	
 	 function create(){
 	 var redirect_path = window.location.pathname;
 	 window.location=redirect_path+"?"+document.getElementById("new_viral").value;
@@ -208,7 +212,6 @@ input#gobutton2{
 	 var window_url=window.location;
 	 var subject = subjectmatter.substr(1);
 	 document.getElementById("subject").innerHTML=subject;
-	 document.getElementById("fb_url").data-href=window_url;
 	 
 	 document.title="somethingviral - "+subject;
 	 }
@@ -237,6 +240,17 @@ input#gobutton2{
 	
 	<input type="text" id="new_viral" value="new_viral" style="width:70%;"><input type="button" value="create" onclick="create()" style="width:30%;">
 	<br><br>
+	
+	<script>
+	
+	document.write('<div id="fb-root"></div>');  
+
+document.write('<script>(function(d){ var js, id = "facebook-jssdk"; if (d.getElementById(id)) {return;} js = d.createElement("script"); js.id = id; js.async = true; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1"; d.getElementsByTagName("head")[0].appendChild(js)(document));</script>');  
+
+document.write('<fb:comments href="'+window_url+'" num_posts="10" width="300px"></fb:comments>');  
+
+	</script>
+	
 	<div class="fb-comments" id="fb_url" data-href="" data-width="280px" data-numposts="5"></div>
 	</div>
 	</div>
