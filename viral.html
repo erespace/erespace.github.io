@@ -199,8 +199,8 @@ input#gobutton2{
 	 
 	 function start(){
 	 
-	 var subject = window.location.search;
-	 
+	 var subjectmatter = window.location.search;
+	 var subject = subjectmatter.substr(1);
 	 document.getElementById("subject").innerHTML=subject;
 	 document.title="somethingviral - "+subject;
 	 }
