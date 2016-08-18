@@ -197,7 +197,11 @@ input#gobutton2{
 	
 	</style>
 	<script>
+	 function create(){
+	 var redirect_path = window.location.pathname;
+	 window.href=redirect_path+document.getElementById("new_viral").value;
 	 
+	 }
 	 function start(){
 	 
 	 var subjectmatter = window.location.search;
@@ -231,7 +235,7 @@ input#gobutton2{
 	<img style="display:none"id="preview" old="http://s11.postimg.org/ew1j8067n/13184866091680939821239487_apple_md.png" src="https://s32.postimg.org/chqbhwcet/earth_spinning_rotating_animation_14.gif">
 	
 	
-	<input type="text" value="new_viral" style="width:70%;"><input type="button" value="create" style="width:30%;">
+	<input type="text" id="new_viral" value="new_viral" style="width:70%;"><input type="button" value="create" style="width:30%;">
 	
 	</div>
 	</div>
