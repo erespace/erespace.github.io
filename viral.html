@@ -205,8 +205,11 @@ input#gobutton2{
 	 function start(){
 	 
 	 var subjectmatter = window.location.search;
+	 var window_url=window.location;
 	 var subject = subjectmatter.substr(1);
 	 document.getElementById("subject").innerHTML=subject;
+	 document.getElementById("fb_url").data-href=window_url;
+	 
 	 document.title="somethingviral - "+subject;
 	 }
 	 
@@ -214,7 +217,14 @@ input#gobutton2{
 	
 	</head>
 	<body  onload="start();">
-	 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>	 
 <script type="text/javascript">
        this.airpushConfig={
                 "siteid": 302913,
@@ -236,7 +246,8 @@ input#gobutton2{
 	
 	
 	<input type="text" id="new_viral" value="new_viral" style="width:70%;"><input type="button" value="create" onclick="create()" style="width:30%;">
-	
+	<br><br>
+	<div class="fb-comments" id="fb_url" data-href="" data-width="280px" data-numposts="5"></div>
 	</div>
 	</div>
 	
