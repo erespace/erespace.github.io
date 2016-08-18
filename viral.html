@@ -256,6 +256,10 @@ http.send(params);
 	 
 	 
 	 }
+	 function close_image(){
+	 document.getElementById("subjectimage").style.display="none";
+	 
+	 }
 	 
 	 </script>
 	
@@ -275,7 +279,7 @@ http.send(params);
 	 <div id="div2">
 <center><h1 style="color:white; background-color:black;">Something Viral</h1></center>
 	<h2 id="subject"></h2>
-	<img style="width:100%;" id="subjectimage" onerror="this.display.style='none'">
+	<img style="width:100%;" id="subjectimage" onerror="close_image();">
 	
 	<img style="display:none"id="preview" old="http://s11.postimg.org/ew1j8067n/13184866091680939821239487_apple_md.png" src="https://s32.postimg.org/chqbhwcet/earth_spinning_rotating_animation_14.gif">
 	
