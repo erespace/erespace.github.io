@@ -257,6 +257,7 @@ http.send(params);
 	 
 	 }
 	 function start(){
+	 get_value("counterviralcount");
 	 var counter = 1;
 	 var subjectmatter = window.location.search;
 	 var window_url=window.location;
@@ -270,7 +271,7 @@ http.send(params);
 	 }else{
 	 var counter = counter +1;
 	 }
-	 store_value("counterviral", counter);
+	 store_value("counterviralcount", counter);
 	 
 	 var strJSON = '{"result":true,"count":1}';
 var objJSON = eval("(function(){return " + strJSON + ";})()");
