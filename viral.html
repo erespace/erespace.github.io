@@ -196,63 +196,7 @@ input#gobutton2{
 	
 	</style>
 	<script>
-	 function previewImage(input) {
-	 var preview = document.getElementById('preview');
-	 if (input.files && input.files[0]) {
-	 var reader = new FileReader();
-	 reader.onload = function (e) {
-	 //document.getElementById('preview').style.display="";
-	 preview.setAttribute('src', e.target.result);
-
-	 }
-	 reader.readAsDataURL(input.files[0]);
-	 } else {
-	 document.getElementById('preview').style.height="auto";
-	 preview.setAttribute('src', 'placeholder.png');
-	
-	 }
-	 }
-	
-	function PRINT_THIS(){
-	window.print();
-	}
-	
-	function changeclass(title){
-	
-	document.getElementById('preview').setAttribute('class',title);
-	
-	}
-	function ABOUT(){
-	
-	//alert("Welcome to the Oblique Anamorphic Image Converter.\n\nThis program is intended to convert images from one perspective to another which are to be viewed at 45 degree angle.\n\nPlease contact erespace@gmail.com , if you have any questions regarding this programs use.\n\nThis program is copyright Iam Ere 26/9/2015, all rights reserved.");
-
 	 
-	  document.getElementById('popUpDiv').style.display="block";
-	  
-	  
-	  }
-	
-
-	
-	window.addEventListener("deviceorientation", findNorth);
-	 function findNorth(evt) {
-	 return true;
-	 var deg=evt.alpha-200;
-	 var div = document.body;
-	 // var div = document.getElementById('div1');
-	 div.style.webkitTransform = 'rotate('+deg+'deg)'; 
-	 div.style.mozTransform = 'rotate('+deg+'deg)'; 
-	 div.style.msTransform = 'rotate('+deg+'deg)'; 
-	 div.style.oTransform = 'rotate('+deg+'deg)'; 
-	 div.style.transform = 'rotate('+deg+'deg)'; 
-	 }
-	 
-	 function close_pop(){
-	 
-	  document.getElementById('popUpDiv').style.display="none";
-	  
-	  
-	  }
 	 
 	 
 	 </script>
@@ -278,7 +222,7 @@ input#gobutton2{
 	
 	
 	<img id="preview" old="http://s11.postimg.org/ew1j8067n/13184866091680939821239487_apple_md.png" src="https://s32.postimg.org/chqbhwcet/earth_spinning_rotating_animation_14.gif">
-	<input type="button" style=" padding: 0px; position: absolute; top: 9px;" id="gobutton2" onclick="ABOUT();" value="X">
+	
 	
 	</div>
 	</div>
