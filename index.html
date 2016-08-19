@@ -235,12 +235,28 @@ input#gobutton2{
 	 }
 	 //store_value("counterviralcount", counter);
 	 
-	 var elemDiv = document.getElementById("fbc");
-    var markup = '';
-    markup += '<div class="fb-comments" data-href="'+location.href+'" data-title="'+document.title+'" data-num-posts="5" data-width="280px" style="margin-top:2em;"></div>';
-    elemDiv.innerHTML = markup;
-    FB.XFBML.parse(elemDiv);
-	 
+	 //var elemDiv = document.getElementById("fbc");
+    //var markup = '';
+    //markup += '<div class="fb-comments" data-href="'+location.href+'" data-title="'+document.title+'" data-num-posts="5" data-width="280px" style="margin-top:2em;"></div>';
+    //elemDiv.innerHTML = markup;
+    //FB.XFBML.parse(elemDiv);
+
+/**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+/*
+var disqus_config = function () {
+    this.page.url = window_url;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = window.btoa(window_url); // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//http-somethingviral-tk.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+
 	 }
 	 function close_image(){
 	 document.getElementById("subjectimage").style.display="none";
@@ -290,7 +306,12 @@ input#gobutton2{
 	<br><br>
 
 	
-	
+	<div id="disqus_thread"></div>
+<script>
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                    
 	
 	<div id="fbc" style="width:280px"></div>
 
