@@ -256,7 +256,7 @@ http.send(params);
 	 
 	 var elemDiv = document.getElementById("fbc");
     var markup = '';
-    markup += '<div class="fb-comments" data-href="'+location.href+'" data-num-posts="5" data-width="280px" style="margin-top:2em;"></div>';
+    markup += '<div class="fb-comments" data-href="'+location.href+'" data-title="'+window.title+'" data-num-posts="5" data-width="280px" style="margin-top:2em;"></div>';
     elemDiv.innerHTML = markup;
     FB.XFBML.parse(elemDiv);
 	 
