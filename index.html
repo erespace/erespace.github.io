@@ -254,7 +254,11 @@ http.send(params);
 	 }
 	 //store_value("counterviralcount", counter);
 	 
-	 
+	 var elemDiv = document.getElementById("fbc");
+    var markup = '';
+    markup += '<div class="fb-comments" data-href="'+location.href+'" data-num-posts="5" data-width="280px" style="margin-top:2em;"></div>';
+    elemDiv.innerHTML = markup;
+    FB.XFBML.parse(elemDiv);
 	 
 	 }
 	 function close_image(){
@@ -310,13 +314,7 @@ http.send(params);
 	
 	
 	<div id="fbc" style="width:280px"></div>
-<script>
-    var elemDiv = document.getElementById("fbc");
-    var markup = '';
-    markup += '<div class="fb-comments" data-href="'+location.href+'" data-num-posts="5" data-width="280px" style="margin-top:2em;"></div>';
-    elemDiv.innerHTML = markup;
-    FB.XFBML.parse(elemDiv);
-</script>
+
 <script type="text/javascript" src = "//connect.facebook.net/bg_BG/all.js#xfbml=1&appId=1116486098419120"></script>
  <div style="position:relaitve;"></div><small><small>somethingViral.tk &copy; Ere 2016</small></small></div>	
 	
