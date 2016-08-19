@@ -303,7 +303,20 @@ http.send(params);
 	<br><br>
 
 	
-	<div class="fb-comments" id="fb_url" data-href="" data-width="280px" data-numposts="5"></div>
+	
+	
+	
+	<div id="fbc" style="width:280px"></div>
+<script>
+    var elemDiv = document.getElementById("fbc");
+    var markup = '';
+    markup += '<div class="fb-comments" data-href="'+location.href+'" data-num-posts="5" data-width="280px" style="margin-top:2em;"></div>';
+    elemDiv.innerHTML = markup;
+    FB.XFBML.parse(elemDiv);
+</script>
+<script type="text/javascript" src = "//connect.facebook.net/bg_BG/all.js#xfbml=1&appId=xxxxxxxxxx"></script>
+	
+	
 	</div>
 	</div>
 	
