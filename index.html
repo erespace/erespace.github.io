@@ -229,7 +229,7 @@ input#gobutton2{
 	 
 	 
 	 
-	 var subject = window.atob(subject);
+	 var subject = window.atob(decodeURIComponent(subject));
 	 document.getElementById("subject").innerHTML=subject;
 	 document.getElementById("subjectimage").src=subject;
 	 
