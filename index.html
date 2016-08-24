@@ -235,7 +235,7 @@ input#gobutton2{
 	 document.getElementById("subjectimage").src=subject;
 	 
 	 document.title="somethingViral - "+subject;
-	 show_comments("disqus_thread");
+	 show_mili("disqus_thread");
 	 if(counter>5){
 	 var counter = 1;
 	 }else{
@@ -251,12 +251,20 @@ input#gobutton2{
 	 document.getElementById("subjectimage").style.display="none";
 	 
 	 }
-	 function show_comments(){
+	 function show_mili(z){
+	 
+	 }
+	 
+	 function show(){
 	 var disqus_config = function () {
     this.page.url = window_url;  // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = subject_matter; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
+
+
 	 document.getElementById("disqus_thread").style.display="";
+	 document.getElementById("addthis_sharing_toolbox").style.display="";
+	 
 	 }
 	 
 
@@ -279,7 +287,7 @@ input#gobutton2{
 	<h2 id="subject"></h2>
 	<img style="width:100%;" id="subjectimage" onerror="close_image();">
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
-<div class="addthis_sharing_toolbox"></div>
+<div class="addthis_sharing_toolbox" style="display:none;"></div>
 	
 	
 
