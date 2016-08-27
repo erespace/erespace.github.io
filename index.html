@@ -14,187 +14,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />	
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0">
 	
-	
-	<style>
-	
+	<link rel="stylesheet" type="text/css" href="index.css">
 
-    /***FIRST STYLE THE BUTTON***/
-    input#gobutton{
-    cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
-    padding:5px 25px; //*add some padding to the inside of the button*/
-   background:lightgrey; /*the colour of the button*/
-    border:1px solid lightblue; /*required or the default border for the browser will appear*/
-    /*give the button curved corners, alter the size as required*/
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    /*give the button a drop shadow*/
-    -webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
-    -moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
-    box-shadow: 0 0 4px rgba(0,0,0, .75);
-    /*style the text*/
-    color:black;
-    font-size:12px;;
-    }
-    /***NOW STYLE THE BUTTON'S HOVER AND FOCUS STATES***/
-    input#gobutton:hover, input#gobutton:focus{
-    background-color :grey; /*make the background a little darker*/
-    /*reduce the drop shadow size to give a pushed button effect*/
-    -webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
-    -moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
-    box-shadow: 0 0 1px rgba(0,0,0, .75);
-    }
-
-
-
-input#gobutton2{
-    cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
-    padding:5px 25px; /*add some padding to the inside of the button*/
-   background:#35b128; /*the colour of the button*/
-    border:1px solid #33842a; /*required or the default border for the browser will appear*/
-    /*give the button curved corners, alter the size as required*/
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    /*give the button a drop shadow*/
-    -webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
-    -moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
-    box-shadow: 0 0 4px rgba(0,0,0, .75);
-    /*style the text*/
-    color:#f3f3f3;
-    font-size:12px;;
-    }
-    /***NOW STYLE THE BUTTON'S HOVER AND FOCUS STATES***/
-    input#gobutton2:hover, input#gobutton2:focus{
-    background-color :#399630; /*make the background a little darker*/
-    /*reduce the drop shadow size to give a pushed button effect*/
-    -webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
-    -moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
-    box-shadow: 0 0 1px rgba(0,0,0, .75);
-    }
-
-
-
-	img {
-	 image-rendering: crisp-edges;
-	 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	 -webkit-tap-highlight-color: transparent;
-	}
-	
-	body {
-	-webkit-transform-origin: 50% 50%;
-	-moz-transform-origin: 50% 50%;
-	-o-transform-origin: 50% 50%;
-	transform-origin: 50% 50%;
-	
-	margin:auto;
-	 backgrountd-color: #ffe200;
-	
-		
-	font-family:lucida sans unicode,lucida grande,sans-serif;
-	
-	 
-	 overflow: hidden;
-	overflow-x: hidden;
-    overflow-y: scroll;
-	 -webkit-user-select: none;
-	 -moz-user-select: none;
-	 -ms-user-select: none;
-	 user-select: none;
-	 text-rendering: optimizeLegibility;
-	 -webkit-font-smoothing: antialiased;
-	 -moz-osx-font-smoothing: antiliased;
-	width:100%;height:2000px;
-	border:0px solid black;
-	 
-	}
-#popUpDiv {
-	position:absolute;
-	background-color:green;
-	color:white;
-		left:0px;
-		width:300px;
-	height:auto;
-	border:5px solid darkolivegreen;
-	z-index: 9002;
-	margin: auto;
-	top:0px;
-	left:0px;
-}	
-	
-	
-	#div1 {
-	
-	//left:300px;
-	padding-left:2%
-	position: absolute;
-	
-	 max-width: 300px;
-	 
-	 //border: 10px solid black;
-	 //-webkit-perspective: 300px; /* Chrome, Safari, Opera */
-	 //perspective: 300px;
-	//transform:scale(1,3.3);
-	//-webkit-transform:scale(1,3.3);
-	//background-color:black;
-	top:auto;
-	margin: auto;
-	
-	
-	
-	}
-	
-	#div2 {
-	
-	 position: absolute;
-	 //background-color: red;
-	 -webkit-transform: rotateX(-45deg); /* Chrome, Safari, Opera */
-	 transform: rotateX(-45deg);
-	 width:280px;
-	 // border: 1px solid #ffe200;
-	 word-break: break-all;
-         margin:auto;
-	
-	}
-	
-	.rotateright{
-	-webkit-transform: rotate(-90deg); 
-	-moz-transform: rotate(-90deg); 
-	-ms-transform: rotate(-90deg); 
-	-o-transform: rotate(-90deg); 
-	}
-	
-	.rotateleft{
-	-webkit-transform: rotate(90deg); 
-	-moz-transform: rotate(90deg); 
-	-ms-transform: rotate(90deg); 
-	-o-transform: rotate(90deg); 
-	}
-	.upsidedown{
-	-webkit-transform: rotate(180deg); 
-	-moz-transform: rotate(180deg); 
-	-ms-transform: rotate(180deg); 
-	-o-transform: rotate(180deg); 
-	}
-	
-	.rightside{
-	-webkit-transform: rotate(0deg); 
-	-moz-transform: rotate(0deg); 
-	-ms-transform: rotate(0deg); 
-	-o-transform: rotate(0deg); 
-	}
-	#preview{
-	//margin: 50% auto;
-	-webkit-transform-origin: 50% 50%;
-	-moz-transform-origin: 50% 50%;
-	-o-transform-origin: 50% 50%;
-	transform-origin: 50% 50%;
-	top:2px; position:absolute;width:300px;;max-height:300px;z-index:700
-
-	margin-bottom:400px;
-	}
-	
-	</style>
 	<script>
 	
 
@@ -257,13 +78,7 @@ input#gobutton2{
 	 }
 	 
 	 function show(){
-	 var disqus_config = function () {
-    this.page.url = window_url;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = subject_matter; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
 
-
-	 document.getElementById("disqus_thread").style.display="";
 	 document.getElementById("addthis").style.display="";
 	 
 	 }
@@ -324,8 +139,7 @@ input#gobutton2{
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-543d5bc17a820d48"></script>
 
-<script type="text/javascript" src="//http-somethingviral-tk.disqus.com/embed.js"></script>
-	
+
 <script type="text/javascript">
        this.airpushConfig={
                 "siteid": 320998,
