@@ -9,13 +9,19 @@
 
 
 
-
+//var string = "This is my compression test.";
+//alert("Size of sample is: " + string.length);
+//var compressed = LZString.compress(string);
+//alert("Size of compressed sample is: " + compressed.length);
+//string = LZString.decompress(compressed);
+//alert("Sample is: " + string);
 
 
 	
 	 function create(){
 	 var redirect_path = window.location.pathname;
-	 window.location=redirect_path+"?"+window.btoa(document.getElementById("new_viral").value);
+	 var product = LZString.compress(document.getElementById("new_viral").value);
+	 window.location=redirect_path+"?"+window.btoa(product);
 	 
 	 }
 	 function start(){
