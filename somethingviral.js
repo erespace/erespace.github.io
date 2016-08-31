@@ -23,7 +23,7 @@
 	 var product = LZString.compress(document.getElementById("new_viral").value);
 	// var product = document.getElementById("new_viral").value;
 	
-	window.location=redirect_path+"?"+window.utoa(product);
+	window.location=redirect_path+"?"+utoa(product);
 	 ///window.location=redirect_path+"?"+window.btoa(product);
 	 
 	 }
