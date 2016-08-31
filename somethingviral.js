@@ -44,10 +44,10 @@ function atou(str) {
 	 
 	
 	 }else{
-	 
-	 
-	 
-	 var subject = window.atob(decodeURIComponent(subject));
+	 //	 var subject = window.atob(decodeURIComponent(subject));
+	
+	 var subject = atou(decodeURIComponent(subject));	
+	 var subject = LZString.decompress(subject)	
 	 }
 	 document.getElementById("subject").innerHTML=subject;
 	 document.getElementById("subjectimage").src=subject;
