@@ -20,11 +20,10 @@
 	
 	 function create(){
 	 var redirect_path = window.location.pathname;
-	 var product = LZString.compress(document.getElementById("new_viral").value);
-	 //window.location=redirect_path+"?"+window.btoa(product);
+	 //var product = LZString.compress(document.getElementById("new_viral").value);
+	 var product = document.getElementById("new_viral").value;
+	 window.location=redirect_path+"?"+window.btoa(product);
 	 
-	 toString(16);
-	 window.location=redirect_path+"?"+product.toString(16);;
 	 }
 	 function start(){
 	 var counter = 1;
