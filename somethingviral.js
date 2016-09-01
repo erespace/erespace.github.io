@@ -34,8 +34,8 @@ function atou(str) {
 	var product = document.getElementById("new_viral").value;
 	//var product = LZString.compress(product);
 	//window.location=redirect_path+"?"+utoa(product);
-	///window.location=redirect_path+"?"+window.btoa(product);
-	 	window.location=redirect_path+"?"+utoa(LZString.compress(window.btoa(product)));
+	window.location=redirect_path+"?"+window.btoa(product);
+	 	//window.location=redirect_path+"?"+utoa(LZString.compress(window.btoa(product)));
 	 }
 	 function start(){
 	 var counter = 1;
@@ -48,8 +48,8 @@ function atou(str) {
 	
 	 }else{
 	 	
-	 //var subject = window.atob(decodeURIComponent(subject));
-	var subject = LZString.decompress(atou(window.atob(decodeURIComponent(subject))));
+	 var subject = window.atob(decodeURIComponent(subject));
+	//var subject = LZString.decompress(atou(window.atob(decodeURIComponent(subject))));
 	 //var subject = atou(decodeURIComponent(subject));	
 	 //var subject = LZString.decompress(subject)	
 	 }
