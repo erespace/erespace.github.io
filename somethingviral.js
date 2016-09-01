@@ -56,7 +56,7 @@ function atou(str) {
 	 document.getElementById("new_viral").value = subject;
 	 document.getElementById("subject").innerHTML=subject;
 	 document.getElementById("subjectimage").src=subject;
-	 		 
+	 document.getElementById("subjectimage2").src=subject;		 
 	 document.title="somethingViral - "+subject;
 	 show_mili("disqus_thread");
 	 if(counter>5){
@@ -72,6 +72,10 @@ function atou(str) {
 	 }
 	 function close_image(){
 	 document.getElementById("subjectimage").style.display="none";
+	 
+	 }
+	 	 function close_subject(){
+	 document.getElementById("subject").style.display="none";
 	 
 	 }
 
