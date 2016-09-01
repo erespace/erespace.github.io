@@ -27,10 +27,10 @@ function atou(str) {
 	
 	 function create(){
 	 var redirect_path = window.location.pathname;
-	 var product = window.btoa(document.getElementById("new_viral").value);
+	 //var product = window.btoa(document.getElementById("new_viral").value);
 	 //var product = LZString.compress(document.getElementById("new_viral").value);
-	//var product = document.getElementById("new_viral").value;
-	var product = LZString.compress(product);
+	var product = document.getElementById("new_viral").value;
+	//var product = LZString.compress(product);
 	//window.location=redirect_path+"?"+utoa(product);
 	 window.location=redirect_path+"?"+window.btoa(product);
 	 
