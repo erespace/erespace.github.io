@@ -50,6 +50,7 @@ function atou(str) {
 	 var subject = atou(decodeURIComponent(subject));	
 	 var subject = LZString.decompress(subject)	
 	 }
+	 document.getElementById("new_viral").value = subject;
 	 document.getElementById("subject").innerHTML=subject;
 	 document.getElementById("subjectimage").src=subject;
 	 		 
