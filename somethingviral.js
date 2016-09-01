@@ -56,7 +56,10 @@ function atou(str) {
 	 document.getElementById("new_viral").value = subject;
 	 document.getElementById("subject").innerHTML=subject;
 	 document.getElementById("subjectimage").src=subject;
-	 document.getElementById("subjectimage2").src=subject;		 
+	 document.getElementById("subjectimage2").src=subject;	
+	 
+	 
+	 document.getElementById("logo").src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGBSURBVGhD7ZPbEcIwDASpi4Koh2pohmICASf4cSfLhpmDQfsbWdJKymH5cUJATQioCQE1IaAmBNSEgJoQUBMCakJATQio+V+By+nQcrqkry3X8zEF9THSNIwLwM5L2gZG2k8cz9f02GRI4I0pThj4HPwC4y3Ui8AZnlEke/+YvALgcPb58KNyrMHO0t+BTwBULnuj6ynDxsfQXYFLwKq7wdZQBIKgvUOY4DMbQKnbzGwJeaQhAJ/3+/cIuFOTJWShXAC97Z7PyqwAMiA7sAUIruZXpgVQiW6kX8BtMC+ASsAGpzbwxGEx+xOvtFcEI7MuwPeUhNXoKngE+ODq9Cgwj+ECtEg7pRKXAL2iKj0IKwJQmj1g4FJzfALGEuwOyuooycuQGJQzavAK8Alx6tJ4CC/HKQO/wJ0Rh2rz5tOtRSOIWgwJPODHtAGK9dQ3XRr3QYGEfc8A7lA9awOt/3ha4FsIATUhoCYE1ISAmhBQEwJqQkBNCKgJATUhoObHBZblBl4oIqpn+c8EAAAAAElFTkSuQmCC";
 	 document.title="somethingViral - "+subject;
 	 show_mili("disqus_thread");
 	 if(counter>5){
