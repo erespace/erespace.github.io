@@ -75,7 +75,8 @@ function atou(str) {
 	 }
 	 function close_image(){
 	 document.getElementById("subjectimage").style.display="none";
-	 
+	  document.getElementById("subjectimage2").style.display="none";
+	   document.getElementById("logo").style.display="none";
 	 }
 	 	 function close_subject(){
 	 document.getElementById("subject").style.display="none";
