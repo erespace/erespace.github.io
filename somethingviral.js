@@ -1,12 +1,12 @@
 
 // ucs-2 string to base64 encoded ascii
-//function utoa(str) {
- //   return window.btoa(unescape(encodeURIComponent(str)));
-//}
+function utoa(str) {
+    return window.btoa(unescape(encodeURIComponent(str)));
+}
 // base64 encoded ascii to ucs-2 string
-//function atou(str) {
-//    return decodeURIComponent(escape(window.atob(str)));
-//}
+function atou(str) {
+    return decodeURIComponent(escape(window.atob(str)));
+}
 
 
 
@@ -30,9 +30,9 @@
 	 //var product = window.btoa(document.getElementById("new_viral").value);
 	 //var product = LZString.compress(document.getElementById("new_viral").value);
 	var product = document.getElementById("new_viral").value;
-	//var product = LZString.compress(product);
-	//window.location=redirect_path+"?"+utoa(product);
-	 window.location=redirect_path+"?"+window.btoa(product);
+	var product = LZString.compress(product);
+	window.location=redirect_path+"?"+utoa(product);
+	// window.location=redirect_path+"?"+window.btoa(product);
 	 
 	 }
 	 function start(){
@@ -45,7 +45,7 @@
 	 
 	
 	 }else{
-	 var subject = window.atob(decodeURIComponent(subject));
+	 //var subject = window.atob(decodeURIComponent(subject));
 	
 	 var subject = atou(decodeURIComponent(subject));	
 	 var subject = LZString.decompress(subject)	
