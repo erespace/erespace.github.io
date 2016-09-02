@@ -29,7 +29,7 @@ function atou(str) {
 	
 	 function create(){
 	 var redirect_path = window.location.pathname;
-	 //var product = window.btoa(document.getElementById("new_viral").value);
+	 //var product =   document.getElementById("new_viral").value);
 	 //var product = LZString.compress(document.getElementById("new_viral").value);
 	var product = document.getElementById("new_viral").value+"***"+document.getElementById("new_viral2").value;
 	//var product = LZString.compress(product);
@@ -67,7 +67,7 @@ function atou(str) {
 
 //<![CDATA[
  var fb = document.createElement('fb:like'); 
- fb.setAttribute("site",window_url+"&one=1"); 
+ fb.setAttribute("site",window.btoa(window_url+"&one=1")); 
  fb.setAttribute("action","like"); 
  fb.setAttribute("layout","button_count");
  fb.setAttribute("show_faces","false");
@@ -77,7 +77,7 @@ function atou(str) {
  //]]>
  
   var fbz = document.createElement('fb:like'); 
- fbz.setAttribute("site",window_url+"&two=2"); 
+ fbz.setAttribute("site",window.btoa(window_url+"&two=2")); 
  fbz.setAttribute("action","like"); 
  fbz.setAttribute("layout","button_count");
  fbz.setAttribute("show_faces","false");
