@@ -80,8 +80,8 @@ function atou(str) {
 
 	 }
 	 function close_image(){
-	 document.getElementById("subjectimage").style.display="none";
-	  document.getElementById("subjectimage2").style.display="none";
+	 document.getElementById("subjectimagebox").style.display="none";
+	  document.getElementById("subjectimage2box").style.display="none";
 	   document.getElementById("logo").style.display="none";
 	 }
 	 	 function close_subject(){
