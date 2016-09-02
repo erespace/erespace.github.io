@@ -65,6 +65,26 @@ function atou(str) {
 
 	 
 
+//<![CDATA[
+ var fb = document.createElement('fb:like'); 
+ fb.setAttribute("site",window_url+"#1"); 
+ fb.setAttribute("action","like"); 
+ fb.setAttribute("layout","button_count");
+ fb.setAttribute("show_faces","false");
+ fb.setAttribute("width","100");
+ fb.setAttribute("font","arial");
+ document.getElementById("FaceBookLikeButton").appendChild(fb);
+ //]]>
+ 
+  var fb = document.createElement('fb:like'); 
+ fb.setAttribute("site",window_url+"#2"); 
+ fb.setAttribute("action","like"); 
+ fb.setAttribute("layout","button_count");
+ fb.setAttribute("show_faces","false");
+ fb.setAttribute("width","100");
+ fb.setAttribute("font","arial");
+ document.getElementById("FaceBookLikeButton2").appendChild(fb);
+
 	 
 	 
 	 
