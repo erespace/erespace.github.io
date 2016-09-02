@@ -67,7 +67,7 @@ function atou(str) {
 
 //<![CDATA[
  var fb = document.createElement('fb:like'); 
- fb.setAttribute("site",window.btoa(window_url+"&one=1")); 
+ fb.setAttribute("site",window_url+"&one=1"); 
  fb.setAttribute("action","like"); 
  fb.setAttribute("layout","button_count");
  fb.setAttribute("show_faces","false");
@@ -77,7 +77,7 @@ function atou(str) {
  //]]>
  
   var fbz = document.createElement('fb:like'); 
- fbz.setAttribute("site",window.btoa(window_url+"&two=2")); 
+ fbz.setAttribute("site",window_url+"&two=2"); 
  fbz.setAttribute("action","like"); 
  fbz.setAttribute("layout","button_count");
  fbz.setAttribute("show_faces","false");
