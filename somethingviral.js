@@ -62,15 +62,6 @@ function atou(str) {
 	 
 	 document.getElementById("subjectimage").src=entryArray[0];
 	 document.getElementById("subjectimage2").src=entryArray[1];	
-	 
-	 var meta;
- if (document.getElementsByTagName) {
- meta = document.getElementsByTagName('meta')[0];
- if (meta) {
- meta.name = 'og:image';
- meta.content = entryArray[0];
- }
- }
 
 	 
 	 
