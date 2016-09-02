@@ -73,7 +73,7 @@ function atou(str) {
  fb.setAttribute("show_faces","false");
  fb.setAttribute("width","100");
  fb.setAttribute("font","arial");
- document.getElementById("FaceBookLikeButton").appendChild(fb);
+// document.getElementById("FaceBookLikeButton").appendChild(fb);
  //]]>
  
   var fbz = document.createElement('fb:like'); 
@@ -83,7 +83,7 @@ function atou(str) {
  fbz.setAttribute("show_faces","false");
  fbz.setAttribute("width","100");
  fbz.setAttribute("font","arial");
- document.getElementById("FaceBookLikeButton2").appendChild(fbz);
+ //document.getelementbyid("FaceBookLikeButton2").appendChild(fbz);
 
 	 
 FB.XFBML.parse();	 
