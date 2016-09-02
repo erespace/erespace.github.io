@@ -67,7 +67,7 @@ function atou(str) {
 
 //<![CDATA[
  var fb = document.createElement('fb:like'); 
- fb.setAttribute("site",window_url+"#1"); 
+ fb.setAttribute("site",window_url+"&one=1"); 
  fb.setAttribute("action","like"); 
  fb.setAttribute("layout","button_count");
  fb.setAttribute("show_faces","false");
@@ -76,14 +76,14 @@ function atou(str) {
  document.getElementById("FaceBookLikeButton").appendChild(fb);
  //]]>
  
-  var fb = document.createElement('fb:like'); 
- fb.setAttribute("site",window_url+"#2"); 
- fb.setAttribute("action","like"); 
- fb.setAttribute("layout","button_count");
- fb.setAttribute("show_faces","false");
- fb.setAttribute("width","100");
- fb.setAttribute("font","arial");
- document.getElementById("FaceBookLikeButton2").appendChild(fb);
+  var fbz = document.createElement('fb:like'); 
+ fbz.setAttribute("site",window_url+"&two=2"); 
+ fbz.setAttribute("action","like"); 
+ fbz.setAttribute("layout","button_count");
+ fbz.setAttribute("show_faces","false");
+ fbz.setAttribute("width","100");
+ fbz.setAttribute("font","arial");
+ document.getElementById("FaceBookLikeButton2").appendChild(fbz);
 
 	 
 FB.XFBML.parse();	 
