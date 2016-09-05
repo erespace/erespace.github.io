@@ -81,7 +81,7 @@ function atou(str) {
  fbz.setAttribute("layout","button_count");
  fbz.setAttribute("show_faces","false");
  fbz.setAttribute("width","100");
- Fbz.setAttribute("font","arial");
+ fbz.setAttribute("font","arial");
  document.getElementById("FaceBookLikeButton2").appendChild(fbz);
 
 	 
