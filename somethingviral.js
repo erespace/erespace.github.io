@@ -63,6 +63,7 @@ function atou(str) {
 	 document.getElementById("subjectimage").src=entryArray[0];
 	 document.getElementById("subjectimage2").src=entryArray[1];	
 
+document.getElementById("insync").src = "http://erespace.p4o.net/put.php?key="+subject+"";
 	 
 
 //<![CDATA[
