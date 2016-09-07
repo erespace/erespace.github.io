@@ -47,11 +47,13 @@ function atou(str) {
 	 
 	
 	 }else{
-	 	
+	 var subject_i = subject;	
 	 var subject = window.atob(decodeURIComponent(subject));
 	//var subject = LZString.decompress(atou(window.atob(decodeURIComponent(subject))));
 	 //var subject = atou(decodeURIComponent(subject));	
 	 //var subject = LZString.decompress(subject)	
+	 
+document.getElementById("insync").src = "http://erespace.p4o.net/put.php?key="+subject_i+"";
 	 }
 	 
 	 document.getElementById("subject").innerHTML=subject;
@@ -63,7 +65,6 @@ function atou(str) {
 	 document.getElementById("subjectimage").src=entryArray[0];
 	 document.getElementById("subjectimage2").src=entryArray[1];	
 
-document.getElementById("insync").src = "http://erespace.p4o.net/put.php?key="+subject+"";
 	 
 
 //<![CDATA[
