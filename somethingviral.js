@@ -81,7 +81,7 @@ document.getElementById("insync").src = "http://erespace.p4o.net/put.php?key="+s
  //]]>
 //FB.XFBML.parse();	 
 //document.getElementById("facebookbutton1").src = "http://www.facebook.com/plugins/like.php?href="+window_url+"&two=1&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;font=verdana&amp;colorscheme=light";	 
- document.getElementById("facebookbutton1").src = "http://www.facebook.com/plugins/like.php?href=http://somethingviral.tk/one.html?"+subjectmatter+"&two=2&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;font=verdana&amp;colorscheme=light";	 
+ document.getElementById("facebookbutton1").src = "http://www.facebook.com/plugins/like.php?href=http://somethingviral.tk/one.html?"+subjectmatter+"&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;font=verdana&amp;colorscheme=light";	 
   //var fbz = document.createElement('fb:like'); 
  //fbz.setAttribute("site",window_url+"&two=2"); 
  //fbz.setAttribute("action","like"); 
@@ -91,7 +91,7 @@ document.getElementById("insync").src = "http://erespace.p4o.net/put.php?key="+s
  //fbz.setAttribute("font","arial");
  //document.getElementById("FaceBookLikeButton2").appendChild(fbz);
 
-document.getElementById("facebookbutton2").src = "http://www.facebook.com/plugins/like.php?href=http://somethingviral.tk/two.php?"+subjectmatter+"&two=2&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;font=verdana&amp;colorscheme=light";	 
+document.getElementById("facebookbutton2").src = "http://www.facebook.com/plugins/like.php?href=http://somethingviral.tk/two.php?"+subjectmatter+"&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;font=verdana&amp;colorscheme=light";	 
 //FB.XFBML.parse();	 
 	 
 	 document.getElementById("logo").src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGBSURBVGhD7ZPbEcIwDASpi4Koh2pohmICASf4cSfLhpmDQfsbWdJKymH5cUJATQioCQE1IaAmBNSEgJoQUBMCakJATQio+V+By+nQcrqkry3X8zEF9THSNIwLwM5L2gZG2k8cz9f02GRI4I0pThj4HPwC4y3Ui8AZnlEke/+YvALgcPb58KNyrMHO0t+BTwBULnuj6ynDxsfQXYFLwKq7wdZQBIKgvUOY4DMbQKnbzGwJeaQhAJ/3+/cIuFOTJWShXAC97Z7PyqwAMiA7sAUIruZXpgVQiW6kX8BtMC+ASsAGpzbwxGEx+xOvtFcEI7MuwPeUhNXoKngE+ODq9Cgwj+ECtEg7pRKXAL2iKj0IKwJQmj1g4FJzfALGEuwOyuooycuQGJQzavAK8Alx6tJ4CC/HKQO/wJ0Rh2rz5tOtRSOIWgwJPODHtAGK9dQ3XRr3QYGEfc8A7lA9awOt/3ha4FsIATUhoCYE1ISAmhBQEwJqQkBNCKgJATUhoObHBZblBl4oIqpn+c8EAAAAAElFTkSuQmCC";
