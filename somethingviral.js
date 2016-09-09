@@ -80,7 +80,7 @@ document.getElementById("insync").src = "http://erespace.p4o.net/put.php?key="+s
  fb.setAttribute("font","arial");document.getElementById("FaceBookLikeButton").appendChild(fb);
  //]]>
 
-document.getElementById("facebookbutton1").src "http://www.facebook.com/plugins/like.php?href="+window_url+"&two=1&amp;
+document.getElementById("facebookbutton1").src = "http://www.facebook.com/plugins/like.php?href="+window_url+"&two=1&amp;
 layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;
 font=verdana&amp;colorscheme=light";	 
  
@@ -93,7 +93,7 @@ font=verdana&amp;colorscheme=light";
  fbz.setAttribute("font","arial");
  document.getElementById("FaceBookLikeButton2").appendChild(fbz);
 
-document.getElementById("facebookbutton2").src "http://www.facebook.com/plugins/like.php?href="+window_url+"&two=2&amp;
+document.getElementById("facebookbutton2").src = "http://www.facebook.com/plugins/like.php?href="+window_url+"&two=2&amp;
 layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;
 font=verdana&amp;colorscheme=light";	 
 //FB.XFBML.parse();	 
