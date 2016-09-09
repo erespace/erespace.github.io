@@ -81,7 +81,7 @@ document.getElementById("insync").src = "http://erespace.p4o.net/put.php?key="+s
  //]]>
 //FB.XFBML.parse();	 
 //document.getElementById("facebookbutton1").src = "http://www.facebook.com/plugins/like.php?href="+window_url+"&two=1&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;font=verdana&amp;colorscheme=light";	 
- document.getElementById("facebookbutton2").src = "http://www.facebook.com/plugins/like.php?href=http://somethingviral.tk/one.html?"+subject_matter+"&two=2&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;font=verdana&amp;colorscheme=light";	 
+ document.getElementById("facebookbutton1").src = "http://www.facebook.com/plugins/like.php?href=http://somethingviral.tk/one.html?"+subject_matter+"&two=2&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;font=verdana&amp;colorscheme=light";	 
   var fbz = document.createElement('fb:like'); 
  fbz.setAttribute("site",window_url+"&two=2"); 
  fbz.setAttribute("action","like"); 
