@@ -56,7 +56,7 @@ function atou(str) {
 document.getElementById("insync").src = "http://erespace.p4o.net/put.php?key="+subject_i+"";
 	 }
 	 
-	 document.getElementById("subject").innerHTML=subject;
+	 
 	 
 	 entryArray = subject.split("***");
 	 document.getElementById("new_viral").value = entryArray[0];
@@ -65,7 +65,7 @@ document.getElementById("insync").src = "http://erespace.p4o.net/put.php?key="+s
 	 document.getElementById("subjectimage").src=entryArray[0];
 	 document.getElementById("subjectimage2").src=entryArray[1];
 	  document.getElementById("subject1").innerHTML=entryArray[0];
-	 document.getElementById("subjecti2").innerHTML=entryArray[1];
+	 document.getElementById("subject2").innerHTML=entryArray[1];
 
 	 
 
