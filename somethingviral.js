@@ -113,8 +113,16 @@ document.getElementById("insync").src = "http://erespace.p4o.net/put.php?key="+s
 	 }
 	 function close_image(){
 	 document.getElementById("subjectimage").style.display="none";
-	  document.getElementById("subjectimage2").style.display="none";
+	  
 	  document.getElementById("subject1").style.display="";
+	 
+	   //document.getElementById("logo").style.display="none";
+	 }
+	 
+	 	 function close_image2(){
+	 
+	  document.getElementById("subjectimage2").style.display="none";
+	  
 	  document.getElementById("subject2").style.display="";
 	   //document.getElementById("logo").style.display="none";
 	 }
