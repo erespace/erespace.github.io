@@ -70,8 +70,8 @@ document.getElementById("insync").src = "http://erespace.p4o.net/put.php?key="+s
 	 
 
 //<![CDATA[
- //var fb = document.createElement('fb:like'); 
-// fb.setAttribute("site","one.html"+subjectmatter+"); 
+var fb = document.createElement('fb:like'); 
+fb.setAttribute("site","one.html"+subjectmatter); 
  
  
  
@@ -82,10 +82,9 @@ document.getElementById("insync").src = "http://erespace.p4o.net/put.php?key="+s
 fb.setAttribute("font","arial");/document.getElementById("FaceBookLikeButton").appendChild(fb);
 //]]>
 FB.XFBML.parse();	 
-//document.getElementById("facebookbutton1").src = "http://www.facebook.com/plugins/like.php?href="+window_url+"&two=1&amp;layout=button_count&amp;show_faces=false&amp;width=90&amp;action=like&amp;font=verdana&amp;colorscheme=light";	 
- document.getElementById("facebookbutton1").src = "http://www.facebook.com/plugins/like.php?href=http://somethingviral.tk/one.html"+subjectmatter+"&amp;layout=button_count&amp;show_faces=false&amp;width=240&amp;action=like&amp;font=verdana&amp;colorscheme=light";	 
+ //document.getElementById("facebookbutton1").src = "http://www.facebook.com/plugins/like.php?href=http://somethingviral.tk/one.html"+subjectmatter+"&amp;layout=button_count&amp;show_faces=false&amp;width=240&amp;action=like&amp;font=verdana&amp;colorscheme=light";	 
   var fbz = document.createElement('fb:like'); 
- fbz.setAttribute("site","one.html"+subjectmatter+");  
+ fbz.setAttribute("site","two.html"+subjectmatter);  
  fbz.setAttribute("action","like"); 
  fbz.setAttribute("layout","button_count");
  fbz.setAttribute("show_faces","false");
