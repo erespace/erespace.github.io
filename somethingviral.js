@@ -107,13 +107,13 @@ document.getElementById("insync").src = "http://erespace.p4o.net/put.php?key="+s
 	 }
 	 //store_value("counterviralcount", counter);
 	 
-alert (redirect_path)
+alert (window.location.pathname);
 /**
  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
 /*
 var disqus_config = function () {
-    this.page.url = redirect_path+"/"+subjectmatter;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.url = window.location.pathname+"/"+subjectmatter;  // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = window.btoa(subjectmatter); // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 */
