@@ -63,7 +63,9 @@ document.getElementById("insync").src = "http://erespace.p4o.net/put.php?key="+s
 	 document.getElementById("new_viral2").value = entryArray[1];
 	 
 	 document.getElementById("subjectimage").src=entryArray[0];
-	 document.getElementById("subjectimage2").src=entryArray[1];	
+	 document.getElementById("subjectimage2").src=entryArray[1];
+	  document.getElementById("subject1").innerHTML=entryArray[0];
+	 document.getElementById("subjecti2").innerHTML=entryArray[1];
 
 	 
 
@@ -110,16 +112,18 @@ document.getElementById("facebookbutton2").src = "http://www.facebook.com/plugin
 
 	 }
 	 function close_image(){
-	 document.getElementById("subjectimagebox").style.display="none";
-	  document.getElementById("subjectimage2box").style.display="none";
-	   document.getElementById("logo").style.display="none";
+	 document.getElementById("subjectimage").style.display="none";
+	  document.getElementById("subjectimage2").style.display="none";
+	  document.getElementById("subject1").style.display="";
+	  document.getElementById("subject2").style.display="";
+	   //document.getElementById("logo").style.display="none";
 	 }
 	 	 function close_subject(){
 	 	 	
 	 	 	
 	 	 	
-	 	 		  document.getElementById("logo").style.display="";
-	 document.getElementById("subject").style.display="none";
+	 	 		 // document.getElementById("logo").style.display="";
+	 //document.getElementById("subject").style.display="none";
 	 
 	 }
 
