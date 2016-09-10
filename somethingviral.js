@@ -79,7 +79,8 @@ fb.setAttribute("site","one.html"+subjectmatter);
  fb.setAttribute("layout","button_count");
  fb.setAttribute("show_faces","false");
  fb.setAttribute("width","100");
-fb.setAttribute("font","arial");/document.getElementById("FaceBookLikeButton").appendChild(fb);
+fb.setAttribute("font","arial");
+document.getElementById("FaceBookLikeButton").appendChild(fb);
 //]]>
 FB.XFBML.parse();	 
  //document.getElementById("facebookbutton1").src = "http://www.facebook.com/plugins/like.php?href=http://somethingviral.tk/one.html"+subjectmatter+"&amp;layout=button_count&amp;show_faces=false&amp;width=240&amp;action=like&amp;font=verdana&amp;colorscheme=light";	 
