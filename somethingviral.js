@@ -62,7 +62,7 @@ document.getElementById("insync").src = "http://erespace.p4o.net/put.php?key="+s
 	 document.getElementById("new_viral").value = entryArray[0];
 	 document.getElementById("new_viral2").value = entryArray[1];
 	 
-	 document.getElementById("subjectimage").src=entryArray[0];
+	 document.getElementById("subjectimage1").src=entryArray[0];
 	 document.getElementById("subjectimage2").src=entryArray[1];
 	  document.getElementById("subject1").innerHTML=entryArray[0];
 	 document.getElementById("subject2").innerHTML=entryArray[1];
@@ -111,8 +111,8 @@ document.getElementById("insync").src = "http://erespace.p4o.net/put.php?key="+s
 
 
 	 }
-	 function close_image(){
-	 document.getElementById("subjectimage").style.display="none";
+	 function close_image1(){
+	 document.getElementById("subjectimage1").style.display="none";
 	  
 	  document.getElementById("subject1").style.display="";
 	 
