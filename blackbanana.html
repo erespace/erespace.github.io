@@ -190,8 +190,8 @@ navigator.vibrate(100);
 
 
 var timercounter=setInterval(timer, 1000); //1000 will  run it every 1 second
-
-var ripencounter=setInterval(ripen, 1100); //1000 will  run it every 1 second
+var ran = Math.floor(Math.random() * 1100)+500;
+var ripencounter=setInterval(ripen, ran); //1000 will  run it every 1 second
 
 
 document.getElementById('1banana').src = bgraphic;
