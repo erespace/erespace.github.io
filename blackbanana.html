@@ -79,7 +79,8 @@ function show_bananas(how){
 function timer()
 
 {
-
+return false;
+  
   count=count-1;
 
 
@@ -181,6 +182,19 @@ navigator.vibrate(100);
 
 
 // }
+    
+  if (score_amount >= 100)
+    
+    document.getElementById("TIMER").innerHTML="";
+document.getElementById("SCORE").innerHTML="";
+hide_bananas();
+ document.getElementById("SCORENOTICE").innerHTML="Game over. You scored "+score_amount+" Bananas, Would you like to play again?<br><font color=red><a onclick='location.reload();' style='cursor:grap'><u color=red>YES</u></a>/NO</font>";
+
+
+clearInterval(timercounter);
+clearInterval(ripencounter);
+  }
+    
   }
 
 
@@ -512,7 +526,7 @@ none;background-color:white;border:1px solid white;font-family: 'Permanent Marke
 
 
 
-<font selectable="false" readonly="readonly" disabled="true" style="position: absolute; left: 1%; bottom: 6%; font-weight: bold; color: grey; background-color: white; border: 1px solid white; font-family: &quot;Permanent Marker&quot;,cursive; font-size: 31px; width: 100%;text-align:center" id="SCORENOTICE" value="60"></font>
+<font selectable="false" readonly="readonly" disabled="true" style="position: absolute; left: 1%; bottom: 6%; font-weight: bold; color: grey; background-color: white; border: 1px solid white; font-family: &quot;Permanent Marker&quot;,cursive; font-size: 18px; width: 100%;text-align:center" id="SCORENOTICE" value="60"></font>
 
 
 
