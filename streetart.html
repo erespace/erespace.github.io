@@ -1,0 +1,350 @@
+<html>
+	
+	<head>
+	
+	 <TITLE>Oblique Anamorphic Image Converter </TITLE>
+	
+	 <!--
+	
+	Code and graphics copyright IAM ERE CHRIST -- erespace@gmail.com, 2015-2016
+	
+	Feel free to alter this code to your liking, but please do not re-host it, do not profit from it and do not present it as your own.
+	
+	--!>
+	
+<meta name="apple-mobile-web-app-capable" content="yes" />	
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0">
+	
+	
+	<style>
+	
+
+    /***FIRST STYLE THE BUTTON***/
+    input#gobutton{
+    cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+    padding:5px 25px; //*add some padding to the inside of the button*/
+   background:lightgrey; /*the colour of the button*/
+    border:1px solid lightblue; /*required or the default border for the browser will appear*/
+    /*give the button curved corners, alter the size as required*/
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    /*give the button a drop shadow*/
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+    -moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+    box-shadow: 0 0 4px rgba(0,0,0, .75);
+    /*style the text*/
+    color:black;
+    font-size:12px;;
+    }
+    /***NOW STYLE THE BUTTON'S HOVER AND FOCUS STATES***/
+    input#gobutton:hover, input#gobutton:focus{
+    background-color :grey; /*make the background a little darker*/
+    /*reduce the drop shadow size to give a pushed button effect*/
+    -webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
+    -moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+    box-shadow: 0 0 1px rgba(0,0,0, .75);
+    }
+
+
+
+input#gobutton2{
+    cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+    padding:5px 25px; /*add some padding to the inside of the button*/
+   background:#35b128; /*the colour of the button*/
+    border:1px solid #33842a; /*required or the default border for the browser will appear*/
+    /*give the button curved corners, alter the size as required*/
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    /*give the button a drop shadow*/
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+    -moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+    box-shadow: 0 0 4px rgba(0,0,0, .75);
+    /*style the text*/
+    color:#f3f3f3;
+    font-size:12px;;
+    }
+    /***NOW STYLE THE BUTTON'S HOVER AND FOCUS STATES***/
+    input#gobutton2:hover, input#gobutton2:focus{
+    background-color :#399630; /*make the background a little darker*/
+    /*reduce the drop shadow size to give a pushed button effect*/
+    -webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
+    -moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+    box-shadow: 0 0 1px rgba(0,0,0, .75);
+    }
+
+
+
+	img {
+	 image-rendering: crisp-edges;
+	 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	 -webkit-tap-highlight-color: transparent;
+	}
+	
+	body {
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-o-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	
+	margin:auto;
+	 backgrountd-color: #ffe200;
+	
+		
+	font-family:lucida sans unicode,lucida grande,sans-serif;
+	
+	 
+	 overflow: hidden;
+	overflow-x: hidden;
+    overflow-y: scroll;
+	 -webkit-user-select: none;
+	 -moz-user-select: none;
+	 -ms-user-select: none;
+	 user-select: none;
+	 text-rendering: optimizeLegibility;
+	 -webkit-font-smoothing: antialiased;
+	 -moz-osx-font-smoothing: antiliased;
+	width:100%;height:2000px;
+	border:0px solid black;
+	 
+	}
+#popUpDiv {
+	position:absolute;
+	background-color:green;
+	color:white;
+		left:0px;
+		width:300px;
+	height:auto;
+	border:5px solid darkolivegreen;
+	z-index: 9002;
+	margin: auto;
+	top:0px;
+	left:0px;
+}	
+	
+	
+	#div1 {
+	
+	//left:300px;
+	padding-left:2%
+	position: absolute;
+	
+	 width: 300px;
+	 
+	 //border: 10px solid black;
+	 -webkit-perspective: 300px; /* Chrome, Safari, Opera */
+	 perspective: 300px;
+	transform:scale(1,3.3);
+	-webkit-transform:scale(1,3.3);
+	//background-color:black;
+	top:auto;
+	margin: auto;
+	
+	
+	
+	}
+	
+	#div2 {
+	
+	 position: absolute;
+	 //background-color: red;
+	 -webkit-transform: rotateX(-45deg); /* Chrome, Safari, Opera */
+	 transform: rotateX(-45deg);
+	 
+	 // border: 1px solid #ffe200;
+	 
+	
+	}
+	
+	.rotateright{
+	-webkit-transform: rotate(-90deg); 
+	-moz-transform: rotate(-90deg); 
+	-ms-transform: rotate(-90deg); 
+	-o-transform: rotate(-90deg); 
+	}
+	
+	.rotateleft{
+	-webkit-transform: rotate(90deg); 
+	-moz-transform: rotate(90deg); 
+	-ms-transform: rotate(90deg); 
+	-o-transform: rotate(90deg); 
+	}
+	.upsidedown{
+	-webkit-transform: rotate(180deg); 
+	-moz-transform: rotate(180deg); 
+	-ms-transform: rotate(180deg); 
+	-o-transform: rotate(180deg); 
+	}
+	
+	.rightside{
+	-webkit-transform: rotate(0deg); 
+	-moz-transform: rotate(0deg); 
+	-ms-transform: rotate(0deg); 
+	-o-transform: rotate(0deg); 
+	}
+	#preview{
+	//margin: 50% auto;
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-o-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	top:2px; position:absolute;width:300px;;max-height:300px;z-index:700
+
+	margin-bottom:400px;
+	}
+	
+	</style>
+	<script>
+	 function previewImage(input) {
+	 var preview = document.getElementById('preview');
+	 if (input.files && input.files[0]) {
+	 var reader = new FileReader();
+	 reader.onload = function (e) {
+	 //document.getElementById('preview').style.display="";
+	 preview.setAttribute('src', e.target.result);
+
+	 }
+	 reader.readAsDataURL(input.files[0]);
+	 } else {
+	 document.getElementById('preview').style.height="auto";
+	 preview.setAttribute('src', 'placeholder.png');
+	
+	 }
+	 }
+	
+	function PRINT_THIS(){
+	window.print();
+	}
+	
+	function changeclass(title){
+	
+	document.getElementById('preview').setAttribute('class',title);
+	
+	}
+	function ABOUT(){
+	
+	//alert("Welcome to the Oblique Anamorphic Image Converter.\n\nThis program is intended to convert images from one perspective to another which are to be viewed at 45 degree angle.\n\nPlease contact erespace@gmail.com , if you have any questions regarding this programs use.\n\nThis program is copyright Iam Ere 26/9/2015, all rights reserved.");
+
+	 
+	  document.getElementById('popUpDiv').style.display="block";
+	  
+	  
+	  }
+	
+
+	
+	window.addEventListener("deviceorientation", findNorth);
+	 function findNorth(evt) {
+	 return true;
+	 var deg=evt.alpha-200;
+	 var div = document.body;
+	 // var div = document.getElementById('div1');
+	 div.style.webkitTransform = 'rotate('+deg+'deg)'; 
+	 div.style.mozTransform = 'rotate('+deg+'deg)'; 
+	 div.style.msTransform = 'rotate('+deg+'deg)'; 
+	 div.style.oTransform = 'rotate('+deg+'deg)'; 
+	 div.style.transform = 'rotate('+deg+'deg)'; 
+	 }
+	 
+	 function close_pop(){
+	 
+	  document.getElementById('popUpDiv').style.display="none";
+	  
+	  
+	  }
+	 
+	 
+	 </script>
+	
+	</head>
+	<body  >
+	 
+<script type="text/javascript">
+       this.airpushConfig={
+                "siteid": 302913,
+                "testmode":1,
+                "banner360": <0 or 1>,
+                 "banner":"kool",
+                "placementid": <placement_id>
+               
+         };
+</script>
+<script type="text/javascript"  src="//ab.airpush.com/apportal/v2/cdn/airpush.js" ></script> 
+	<div id="div1">
+	
+	 <div id="div2">
+
+	
+	
+	<img id="preview" old="http://s11.postimg.org/ew1j8067n/13184866091680939821239487_apple_md.png" src="https://s32.postimg.org/chqbhwcet/earth_spinning_rotating_animation_14.gif">
+	<input type="button" style=" padding: 0px; position: absolute; top: 9px;" id="gobutton2" onclick="ABOUT();" value="X">
+	
+	</div>
+	</div>
+	
+	
+	
+	 <div id="tools" style="bottom:6%;width:595px; font-size:25px;display:block;overflow:hidden;text-align:center;"></div>
+	
+	
+	
+	
+	
+	 <div style=" display:none;position:fixed;padding-left:1%; bottom:1%;width:595px; font-size:25px;position:absolute;overflow:hidden;text-align:center;">&nbsp;<button onclick="PRINT_THIS();">PRINT</button>&nbsp;<button onclick="ABOUT();">ABOUT</button>&nbsp;<button onclick="changeclass('rotateleft');">LEFT</button>&nbsp;<button onclick="changeclass('rotateright');">RIGHT</button>&nbsp;<button onclick="changeclass('upsidedown');">Upside</button>&nbsp;<button onclick="changeclass('rightside');">Correct</button><center>
+	 </div>
+	<div style="display:none;position:absolute;bottom:0px;width:100%;font-family:tahoma;"><center ><small><small>&copy Iam Ere 18/8/2015</small></small></center></div>
+	
+			 
+<div id="popUpDiv">
+	<div style="margin:auto; width:100%;">
+	<center><h3> Oblique Anamorphic Image Converter.</h3></center><center><br>To transform an image click this button:<br>
+	<input id="gobutton2" onchange="previewImage(this);close_pop()" type="file" style="width:80%;font-size:13px" name="file_choose_take" Value="Choose Image" id="file_choose_take" class="myButton" accept="image/pjpeg;image/jpeg ;video/mp4 ;video/3gpp ;capture=camera;camcorder"></center><br>
+
+This application is to aid in the anamorphic transformation of images, where the transformed image can be printed out and utilized in such things as below:<br><br>
+* Business Cards<br>
+* Slant Art<br>
+* Street Art<br>
+* Road Signs<br>
+* Floor Advertising<br>
+* Greeting Cards<br>
+* Promotional Literature<br>
+<br>
+<div align="center" id="slot1">
+</div> 
+<br>
+<div id="kool" sytle="width:100%;">
+
+
+</div>
+
+<br><center style="position:absolute;bottom:0px;width:100%"><small><small>© IAM 26/9/2015, all rights reserved.</small></small></center>
+
+<input type="button" style="position: absolute; top: 4px; right: 10px;padding:0px;" value="X" id="gobutton" onclick="close_pop();">
+</div>
+	</div>
+	
+	 
+
+	
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=10880850; 
+var sc_invisible=1; 
+var sc_security="7c420801"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify stats"
+href="http://statcounter.com/shopify/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/10880850/0/7c420801/1/"
+alt="shopify stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->	
+
+	</body>
+	
+	</html>
