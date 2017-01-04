@@ -59,8 +59,8 @@ document.getElementById("SCORE").innerHTML="";
 
 hide_bananas();
  document.getElementById("SCORENOTICE").innerHTML="</b><big>Game over.</big></b> <br>You scored "+score_amount+" Bananas, Would you like to play again?<br><font color=red><a onclick='location.reload();' style='cursor:hand'><u color=red>YES</u></a>/NO</font>";
-clearInterval(timer);
-clearInterval(ripen);
+clearInterval(timercounter);
+clearInterval(ripencounter);
   document.getElementById("SCORENOTICE").style.bottom="";
   
  
@@ -110,6 +110,8 @@ document.getElementById('5banana').src = bgraphic;
 document.getElementById('5banana').style.display = "inline";
 document.getElementById('6banana').src = bgraphic;
 document.getElementById('6banana').style.display = "inline";
+   document.getElementById('div2').style.display="";
+   
   }
   </script>
 
@@ -253,7 +255,7 @@ img.BNW:hover {
 
 <div id="div1">
 
-  <div id="div2">
+  <div id="div2" style="display:none;">
 
 
 
