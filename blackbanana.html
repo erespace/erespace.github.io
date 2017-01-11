@@ -137,7 +137,7 @@ document.getElementById('9banana').style.display = "inline";
 
 
 function create_rocket(value) {
-return false;
+
   n = createGuid();
   right = Math.floor((Math.random() * 320) + 1);
   topz = -10;
@@ -149,7 +149,7 @@ return false;
   div.style.background = "";
   div.style.color = "black";
   div.style.fontWeight = "bold";
-   div.innerHTML = "<img src='"+ document.getElementById("1banana").src+"' style='width:50px;'>" + value;
+   div.innerHTML = "<img src='"+ document.getElementById("1banana").src+"' style='width:50px;'>";
    //div.innerHTML = "<img src='"+ document.getElementById("1banana").src+"' style='width:50px;'>";
   div.className = "rocket bounce";
   div.id = Number(n + right + topz);
@@ -500,7 +500,16 @@ style="display:none;position:absolute;width:30%;bottom:17%; right:35%;z-index:00
 
 
 <div  id="instruction" style="display:none;position:fixed; bottom:0px;width:100%; text-align:center;">Click the Black Banana to score.<br>
-  
+ <div align="center" id="slot1">
+
+
+
+
+  </div>
+
+
+
+ 
 <div class="addthis_sharing_toolbox"></div>
   
   <small>Created by <a href="https://mbasic.facebook.com/goldamite.mc"> Ere</a> </small><small><small>&copy IAM
