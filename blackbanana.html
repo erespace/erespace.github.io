@@ -129,8 +129,10 @@ document.getElementById('9banana').src = bgraphic;
 document.getElementById('9banana').style.display = "inline";
 
 
-
-
+var elem = document.getElementById("go");
+if (elem.requestFullscreen) {
+  elem.requestFullscreen();
+}
    //document.getElementById('div2').style.display="";
    //document.getElementById('loading').style.display="none";
   }
@@ -356,7 +358,7 @@ img.BNW:hover {
 
 
 
-<body onload="load();">
+<body id="game"   onload="load();">
   <audio id="player"></audio>
   <div id="fb-root"></div>
 <script>(functtion(d, s, id) {
