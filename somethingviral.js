@@ -43,7 +43,7 @@ function atou(str) {
 	 var window_url=window.location;
 	 var subject = subjectmatter.substr(1);
 	 if(subject==""){
-	 var subject="Welcome to somethingViral.tk";
+	 var subject="A***B";
 	 
 	
 	 }else{
