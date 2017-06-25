@@ -83,6 +83,8 @@ document.getElementById("insync").src = "http://erespace.p4o.net/put.php?key="+s
 //document.getElementById("FaceBookLikeButton").appendChild(fb);
 //]]>
 //FB.XFBML.parse();	 
+		 
+		 alert (window.btoa(product));
  document.getElementById("facebookbutton1").src = "http://www.facebook.com/plugins/like.php?href=http://somethingviral.tk/one.html?A=A&"+window.btoa(product)+"&amp;layout=button_count&amp;show_faces=false&amp;width=240&amp;action=like&amp;font=verdana&amp;colorscheme=light";	 
  // var fbz = document.createElement('fb:like'); 
  //fbz.setAttribute("site","two.html"+subjectmatter);  
