@@ -89,7 +89,6 @@ document.getElementById("insync").src = "http://erespace.p4o.net/put.php?key="+s
 //FB.XFBML.parse();	 
 
 		 //alert (window.btoa(product));
-		 <g:plusone id="googlebutton1" href="" size="small" count="false"></g:plusone>
 		 document.getElementById("googlebutton1").href="http://somethingviral.tk/one.html?"+window.btoa(product+"***a")+"&A=A";
  document.getElementById("facebookbutton1").src = "http://www.facebook.com/plugins/like.php?href=http://somethingviral.tk/one.html?"+window.btoa(product+"***a")+"&A=A&amp;layout=button_count&amp;show_faces=false&amp;width=240&amp;action=like&amp;font=verdana&amp;colorscheme=light";	 
  // var fbz = document.createElement('fb:like'); 
