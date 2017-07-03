@@ -162,6 +162,6 @@ var disqus_config = function () {
 
 	 function show(){
 
-	 document.getElementById("addthis").style.display="";
+	 //document.getElementById("addthis").style.display="";
 
 	 }
