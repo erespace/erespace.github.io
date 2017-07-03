@@ -121,7 +121,7 @@ document.getElementById("facebookbutton2").src = "http://www.facebook.com/plugin
 	 function close_image1(){
 	 document.getElementById("subjectimage1").style.display="none";
 
-	  document.getElementById("subject1").style.display="";
+	 // document.getElementById("subject1").style.display="";
 
 	   //document.getElementById("logo").style.display="none";
 	 }
@@ -130,7 +130,7 @@ document.getElementById("facebookbutton2").src = "http://www.facebook.com/plugin
 
 	  document.getElementById("subjectimage2").style.display="none";
 
-	  document.getElementById("subject2").style.display="";
+	 // document.getElementById("subject2").style.display="";
 	   //document.getElementById("logo").style.display="none";
 	 }
 	 	 function close_subject1(){
