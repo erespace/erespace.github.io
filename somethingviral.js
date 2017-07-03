@@ -133,12 +133,21 @@ document.getElementById("facebookbutton2").src = "http://www.facebook.com/plugin
 	  document.getElementById("subject2").style.display="";
 	   //document.getElementById("logo").style.display="none";
 	 }
-	 	 function close_subject(){
+	 	 function close_subject1(){
 
 
 
 	 	 		 // document.getElementById("logo").style.display="";
-	 //document.getElementById("subject").style.display="none";
+	document.getElementById("subject1").style.display="none";
+
+	 }
+
+ function close_subject2(){
+
+
+
+	 	 		 // document.getElementById("logo").style.display="";
+	 document.getElementById("subject2").style.display="none";
 
 	 }
 
