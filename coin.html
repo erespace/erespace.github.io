@@ -513,7 +513,7 @@ if (allbananas >1) {
 for (i = 0; i < Math.round(user_click_rate,-1); i++) { 
     create_rocket(Number(user_click_rate).toFixed(0));
 create_info_rocket("You made "+Math.round(allbananas,1)+" coin/s, well done");
-
+window.navigator.vibrate(200);
 }
 
 for (i = 0; i < Math.round(bananas_per_second,-1); i++) { 
@@ -936,16 +936,7 @@ document.getElementById("game").style.visibility="visible";
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<script type="text/javascript">
-       this.airpushConfig={
-                "siteid": 335279,
-                "testmode":0,
-                "banner360": 1,
-                "placementid":0
-               
-         };
-</script>
-<script type="text/javascript"  src="//ab.airpush.com/apportal/v2/cdn/airpush.js" ></script> 
+
 <div style="width:100%;position:fixed;bottom:0%; font-size:12px;z-index:5000"><center> &copy; IAM 2015-2017, All rights reserved. 
 
 </center> </div>
