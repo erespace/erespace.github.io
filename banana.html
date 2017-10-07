@@ -450,7 +450,7 @@ function timer() {
     document.getElementById('TIMER').innerHTML = days + ":" + hours + ":" + minutes + ":" + remainingSeconds;
     if (seconds == 0) {
         clearInterval(countdownTimer);
-        document.getElementById('countdown').innerHTML = "Completed";
+        document.getElementById('TIMER').innerHTML = "Completed";
     } else {
         seconds--;
     }
@@ -466,19 +466,19 @@ function format(value) {
     }
     
     if (value >= thousand && value <= 1000000) {
-         return  Math.round(value/thousand) + 'k';   
+         return  Math.round(value/thousand,-1) + 'k';   
     }
     
     if (value >= million && value <= billion) {
-        return Math.round(value/million) + 'M';   
+        return Math.round(value/million,-1) + 'M';   
     }
     
     if (value >= billion && value <= trillion) {
-        return Math.round(value/billion) + 'B';   
+        return Math.round(value/billion,-1) + 'B';   
     }
     
     else {
-        return Math.round(value/trillion) + 'T';   
+        return Math.round(value/trillion,-1) + 'T';   
     }
 }
 function createGuid() {
