@@ -506,7 +506,7 @@ function createGuid() {
 }
 function update_display() {
   document.getElementById("SCORE").innerHTML = ""+
-    format(Number(bananas).toFixed(2)) + " BANANA/S<br><small>" + (Number(bananas_per_second) + Number(user_click_rate)).toFixed(2) + " <b> per second</b></small>";
+    format(Number(bananas).toFixed(2)) + "<br>BANANA/S<br><small style='color:black'>" + (Number(bananas_per_second) + Number(user_click_rate)).toFixed(2) + " <b>/sec</b></small>";
 
 allbananas = bananas_per_second+user_click_rate;
 
@@ -528,7 +528,7 @@ bananas_per_second_decimal = Math.round(bananas_per_second * 100) / 100;
 
 
 for (i = 0; i < Math.round(user_click_rate,-1); i++) { 
-    create_rocket(Number(user_click_rate).toFixed(0));
+    //create_rocket(Number(user_click_rate).toFixed(0));
 
 
 //create_info_rocket("You picked "+Number(user_click_rate)+" bananas/s, well done");
@@ -536,7 +536,7 @@ window.navigator.vibrate(200);
 }
 
 for (i = 0; i < Math.round(bananas_per_second,-1); i++) { 
-  create_rocket(Number(user_click_rate).toFixed(0));
+ // create_rocket(Number(user_click_rate).toFixed(0));
 
 
 //create_info_rocket("You made "+Math.round(allbananas,-1)+" bananas/s, well done");
@@ -544,7 +544,7 @@ for (i = 0; i < Math.round(bananas_per_second,-1); i++) {
 }
 
 
-///create_info_rocket("You picked "+user_click_rate_decimal+" bananas/s, your pickers picked "+bananas_per_second_decimal+" banana/s, well done.");
+///create_info_rocket("You picked "+user_click_rate_decimal+", bananas/s, your pickers picked "+bananas_per_second_decimal+" banana/s, well done.");
 
 allbananas = 0;
 
@@ -555,7 +555,7 @@ allbananas = 0;
 
  document.getElementById("GOLD").innerHTML =
     format(Number(goldcurrent).toFixed(2)) + " GOLD<small> <br>" + (Number(gold_per_second) + Number(gold_click_rate)).toFixed(2) + "/s</small>";
-  window.document.title = Number(bananas).toFixed(2) + " BANANA/s - Banana Click Plantation 2.0";
+  window.document.title = Number(bananas).toFixed(2) + " - BANANA/s - Banana Click Plantation 2.0";
   
   setInterval(function(){   save_game(); }, 5000);
 
@@ -970,8 +970,6 @@ document.getElementById("game").style.visibility="visible";
       onclddick="alert('hello');"> </img>
       <div type="text" onclickc="help()" STYLE="  " ID="SCORE" value="">
       
- 0.00 BANANA/S<br><small> 0.00 <b> per second</b> </small><br>
- 
 </div>
 
 
