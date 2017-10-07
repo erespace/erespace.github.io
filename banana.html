@@ -491,7 +491,7 @@ function createGuid() {
 }
 function update_display() {
   document.getElementById("SCORE").innerHTML = ""+
-    format(Number(bananas).toFixed(2)) + " BANANAS/S<br><small>" + (Number(bananas_per_second) + Number(user_click_rate)).toFixed(2) + " <b> per second</b></small>";
+    format(Number(bananas).toFixed(2)) + " BANANA/S<br><small>" + (Number(bananas_per_second) + Number(user_click_rate)).toFixed(2) + " <b> per second</b></small>";
 
 allbananas = bananas_per_second+user_click_rate;
 
@@ -535,7 +535,7 @@ allbananas = 0;
 
  document.getElementById("GOLD").innerHTML =
     format(Number(goldcurrent).toFixed(2)) + " GOLD<small> <br>" + (Number(gold_per_second) + Number(gold_click_rate)).toFixed(2) + "/s</small>";
-  window.document.title = Number(bananas).toFixed(2) + " BANANASS/s - Banana Click Plantation 2.0";
+  window.document.title = Number(bananas).toFixed(2) + " BANANA/s - Banana Click Plantation 2.0";
   
   setInterval(function(){   save_game(); }, 5000);
 
@@ -1012,7 +1012,7 @@ Good Day! :)<br><br>Click the big BANANA to pick BANANAS.<br><br>
 
 
 
-<div type="text" onclickc="help()" STYLE="" ID="TIMER" value="">0:0:0:0</DIV>   
+<div type="text" onclickc="help()" STYLE="" ID="TIMER" value=""></DIV>   
 
 </body>
 
