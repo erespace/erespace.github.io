@@ -512,7 +512,7 @@ if (allbananas >1) {
 
 for (i = 0; i < Math.round(user_click_rate,-1); i++) { 
     create_rocket(Number(user_click_rate).toFixed(0));
-create_info_rocket("You picked "+Math.round(allbananas,-1)+" bananas/s, well done");
+create_info_rocket("You picked "+Math.round(user_click_rate,-1)+" bananas/s, well done");
 window.navigator.vibrate(200);
 }
 
@@ -673,7 +673,7 @@ function create_info_rocket(value) {
 open_info("info");
 document.getElementById("info").innerHTML = value;
 setTimeout(function() {
-    remove_info("info");  }, 3000);
+    remove_info("info");  }, 7000);
 return false;
 
 }
