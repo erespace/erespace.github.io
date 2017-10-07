@@ -832,9 +832,9 @@ function buymulti(){
    if (bananas < newmulticost) {
     return create_info_rocket('Please click and collect atleast '+ format(Number(newmulticost).toFixed(2))+' coin/s, to multiply the coin made x2.');
   }
-  if (confirm("Exchange " + parseFloat(newmulticost).toFixed(2) + " coin/s to multiply how much coin is made x2<br>You currently have " + parseFloat(automulti) + " multipling the click rate by "+parseFloat(autoclicksrate).toFixed(2) ) == false) {
-   return false;
-  }
+  //if (confirm("Exchange " + parseFloat(newmulticost).toFixed(2) + " coin/s to multiply how much coin is made x2<br>You currently have " + parseFloat(automulti) + " multipling the click rate by "+parseFloat(autoclicksrate).toFixed(2) ) == false) {
+   //return false;
+  //}
 
 create_info_rocket_no_timer("Exchange " + parseFloat(newmulticost).toFixed(2) + " coin/s to multiply how much coin is made x2\n\r\n\rYou currently have " + parseFloat(automulti) + " multipling the click rate by "+parseFloat(autoclicksrate).toFixed(2)+"<br><button style='font-family:system;font-size:23px;' onclick='confirmabuymulit(this);buymulti(this);'> EXCHANGE </button><br><button style='font-family:system;font-size:23px;' onclick='remove_info(\"info\")'> CANCEL </button>");
 return false;
@@ -996,6 +996,10 @@ Good Day! :)<br><br>Click the big coin to make coins.<br><br>
   <input type="button" style="font-size:23px;width:100%;FONT-FAMILY:SYSTEM;" ONCLICK="reset(this);remove_info('help');" value="RESET" ontouchstart="return true;"
   style=""></input>
 <br><br>
+
+
+<a  href="/banana1.html"> Click here to play Banana Click Plantation 2 </a><br>
+
 <button style="font-size:23px;width:100%;FONT-FAMILY:SYSTEM;color:green;background:yellow"  onclick="remove_info('help');"> PLAY </button>
 <br><br>
 <div style="" class="fb-like" data-href="http://somethingviral.tk/coin.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div><br><br><br>
