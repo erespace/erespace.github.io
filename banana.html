@@ -490,8 +490,9 @@ function createGuid() {
   });
 }
 function update_display() {
-  document.getElementById("SCORE").innerHTML = ""+
-    format(Number(bananas).toFixed(2)) + " BANANA/S<br><small>" + (Number(bananas_per_second) + Number(user_click_rate)).toFixed(2) + " <b> per second</b></small>";
+
+///calculate the Score///
+
 
 allbananas = bananas_per_second+user_click_rate;
 
@@ -509,13 +510,14 @@ if (allbananas >1) {
 //amount = 0;
 
 
-
+//these are like the adders like for example if i successfully click a banana to it ripens it spits me out a black bananan
 for (i = 0; i < Math.round(user_click_rate,-1); i++) { 
     create_rocket(Number(user_click_rate).toFixed(0));
 //create_info_rocket("You picked "+Math.round(user_click_rate,-1)+" bananas/s, well done");
 window.navigator.vibrate(200);
 }
 
+//these are like the adders like for example if if the machine successfully autoclicks a banana to it ripens it spits me out a black bananan
 for (i = 0; i < Math.round(bananas_per_second,-1); i++) { 
   create_rocket(Number(user_click_rate).toFixed(0));
 //create_info_rocket("You made "+Math.round(allbananas,-1)+" bananas/s, well done");
@@ -532,6 +534,8 @@ allbananas = 0;
 
   }
 
+  document.getElementById("SCORE").innerHTML = ""+
+    format(Number(bananas).toFixed(2)) + " BANANA/S<br><small>" + (Number(bananas_per_second) + Number(user_click_rate)).toFixed(2) + " <b> per second</b></small>";
 
 
  document.getElementById("GOLD").innerHTML =
@@ -727,9 +731,8 @@ function remove_rocket(id) {
 function ripen_banana() {
   //document.getElementById("1banana").className = "";
 new_current_score = (parseFloat(bananas) + parseFloat(bananas_per_second));
-//new_current_score = (parseFloat(bananas));
+bananas = new_current_score;
 
-  bananas = new_current_score;
   user_clicks = 0;
   user_click_rate = 0;
   gold_clicks = 0;
