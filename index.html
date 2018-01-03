@@ -87,20 +87,29 @@ font-family:sans-serif;
  <hr style="border:5px solid black"></hr> 
  <br><br>
  
-
+<div id="instafeed"></div> 
+ 
 
 <script type="text/javascript">
-    var feed = new Instafeed({
-        get: 'tagged',
-        tagName: '#3dbusinesscards',
-        clientId: '630c0526fda74e929547b7500212d5a8'
-    });
-    feed.run();
+    //var feed = new Instafeed({
+     //   get: 'tagged',
+      //  tagName: '#3dbusinesscards',
+       // clientId: '630c0526fda74e929547b7500212d5a8'
+    //});
+    //feed.run();
+ 
+ 
+ var feed = new Instafeed({
+  clientId: '630c0526fda74e929547b7500212d5a8',
+  get: 'tagged',
+  tagName: 'newyears',
+  resolution: 'low_resolution'
+});
+feed.run();
 </script>
       
 
-      <div id="instafeed"></div> 
- 
+      
  
  <br><br>
  
