@@ -99,13 +99,13 @@ font-family:sans-serif;
     //feed.run();
  
  
- var feed = new Instafeed({
-  clientId: '630c0526fda74e929547b7500212d5a8',
-  get: 'tagged',
-  tagName: 'newyears',
-  resolution: 'low_resolution'
-});
-feed.run();
+  var feed = new Instafeed({
+        get: 'tagged',
+        tagName: 'awesome',
+        clientId: '630c0526fda74e929547b7500212d5a8',
+        template: '<a href="{{link}}"><img src="{{image}}" /></a>'
+    });
+    feed.run();
 </script>
       
 
