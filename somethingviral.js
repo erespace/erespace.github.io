@@ -93,7 +93,7 @@ document.getElementById("insync").src = "http://erespace.p4o.net/put.php?key="+s
 		   ///document.getElementById("googlebutton1").href= "http://somethingviral.tk/one.html?"+window.btoa(product+"***a")+"&A=A";
  document.getElementById("facebookbutton1").src = "http://www.facebook.com/plugins/like.php?href=http://somethingviral.tk/one.html?"+window.btoa(product+"***a")+"&A=A&amp;layout=button_count&amp;show_faces=false&amp;width=240&amp;action=like&amp;font=verdana&amp;colorscheme=light";	 
 
-		document.getElementById("googlebutton1").href="http://somethingviral.tk/one.html?"+window.btoa(product+"***a")+"&A=A";
+		///document.getElementById("googlebutton1").href="http://somethingviral.tk/one.html?"+window.btoa(product+"***a")+"&A=A";
 		 // var fbz = document.createElement('fb:like'); 
  //fbz.setAttribute("site","two.html"+subjectmatter);  
  //fbz.setAttribute("action","like"); 
