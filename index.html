@@ -89,17 +89,16 @@ font-family:sans-serif;
  
 
 
-
 <script type="text/javascript">
     var feed = new Instafeed({
-        get: 'user',
-        userId: 'vozduhere',
-        filter: function(image) {
-            return image.tags.indexOf('3dbusinesscards') >= 0;
-        }
+        get: 'tagged',
+        tagName: '#3dbusinesscards',
+        clientId: '630c0526fda74e929547b7500212d5a8'
     });
     feed.run();
 </script>
+      
+
       
  
  
