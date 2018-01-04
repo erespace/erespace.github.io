@@ -1,37 +1,4 @@
-
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>jQuery.getJSON demo</title>
-  <style>
-  img {
-    height: 100px;
-    float: left;
-  }
-  </style>
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-</head>
-<body>
- 
-<div id="images"></div>
- 
-<script>
-(function() {
-  var flickerAPI = 'https://instagram.com/graphql/query/?query_id=17888483320059182&variables={"id":"6720040285","first":20,"after":null}&callback=hello';
-  $.getJSON( flickerAPI, {
-    id: "6720040285",
-    first: "20",
-      after: "null",
-    format: "json"
-  })
-    .done(function( data ) {
-      $.each( data.items, function( i, item ) {
-        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
-        if ( i === 3 ) {
-          return false;
-        }
-      });
+<!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/57c676d53f7657c888c703bdf8a50c58.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
     });
 })();
 </script>
