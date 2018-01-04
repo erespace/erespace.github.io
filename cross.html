@@ -1,21 +1,42 @@
-<html>
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery.getJSON demo</title>
+  <style>
+  img {
+    height: 100px;
+    float: left;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
 <body>
-
-<h2>Use the XMLHttpRequest to get the content of a file.</h2>
-<p>The content is written in JSON format, and can easily be converted into a JavaScript object.</p>
-
-<p id="demo"></p>
-
+ 
+<div id="images"></div>
+ 
 <script>
-
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var myObj = JSON.parse(this.responseText);
-        document.getElementById("demo").innerHTML = this.responseText;
-    }
-};
-xmlhttp.open('GET', 'https://instagram.com/graphql/query/?query_id=17888483320059182&variables={"id":"6720040285","first":20,"after":null}&callback=hello', true);
-xmlhttp.send();
-
+(function() {
+  var flickerAPI = "https://instagram.com/graphql/query/?query_id=17888483320059182&variables={"id":"6720040285","first":20,"after":null}&callback=hello";
+  $.getJSON( flickerAPI, {
+    id: "6720040285",
+    first: "20",
+      after: "null",
+    format: "json"
+  })
+    .done(function( data ) {
+      $.each( data.items, function( i, item ) {
+        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+        if ( i === 3 ) {
+          return false;
+        }
+      });
+    });
+})();
 </script>
+ 
+</body>
+</html>
+
+
