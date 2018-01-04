@@ -87,21 +87,7 @@ font-family:sans-serif;
  <hr style="border:5px solid black"></hr> 
  <br><br>
  
-<p id="demo"></p>
 
-<script>
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var myObj = JSON.parse(this.responseText);
-        document.getElementById("demo").innerHTML = this.responseText;
-    }
-};
- xmlhttp.open("GET", "https://instagram.com/graphql/query/?query_id=17888483320059182&variables=", true);
-//xmlhttp.open("GET", "https://instagram.com/graphql/query/?query_id=17888483320059182&variables={"id":"6720040285","first":20,"after":null}", true);
-xmlhttp.send();
-</script>
-      
 
       
  
