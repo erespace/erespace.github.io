@@ -836,14 +836,14 @@ function buymulti(){
    //return false;
   //}
 
-create_info_rocket_no_timer("Exchange " + parseFloat(newmulticost).toFixed(2) + " coin/s to multiply how much coin is made x2\n\r\n\rYou currently have " + parseFloat(automulti) + " multipling the click rate by "+parseFloat(autoclicksrate).toFixed(2)+"<br><button style='font-family:system;font-size:23px;' onclick='(this);buymulti(this);'> EXCHANGE </button><br><button style='font-family:system;font-size:23px;' onclick='remove_info(\"info\")'> CANCEL </button>");
+create_info_rocket_no_timer("Exchange " + parseFloat(newmulticost).toFixed(2) + " coin/s to multiply how much coin is made x2\n\r\n\rYou currently have " + parseFloat(automulti) + " multipling the click rate by "+parseFloat(autoclicksrate).toFixed(2)+"<br><button style='font-family:system;font-size:23px;' onclick='confirmbuymulti(this);buymulti(this);'> EXCHANGE </button><br><button style='font-family:system;font-size:23px;' onclick='remove_info(\"info\")'> CANCEL </button>");
 return false;
   
 
 }
 
 function confirmbuymulti(){
-alert("hello");
+///alert("hello");
 if (bananas < newmulticost) {
     return create_info_rocket('Please click and collect more banana/s.');
   } else {
