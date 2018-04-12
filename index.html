@@ -513,11 +513,18 @@ if (allbananas >1) {
 for (i = 0; i < Math.round(user_click_rate,-1); i++) { 
     create_rocket(Number(user_click_rate).toFixed(0));
 create_info_rocket("You made "+Math.round(allbananas,1)+" coin/s, well done");
+score_potential = autoclicksrate;
+  //elem.className="spin_banana";
+  //new_current_score = parseFloat(bananas) + parseFloat(score_potential);
+
 window.navigator.vibrate(200);
 }
 
 for (i = 0; i < Math.round(bananas_per_second,-1); i++) { 
     create_used_rocket(Number(user_click_rate).toFixed(0));
+score_potential = autoclicksrate;
+  //elem.className="spin_banana";
+  //new_current_score = parseFloat(bananas) + parseFloat(score_potential);
 //create_info_rocket("You made "+Math.round(allbananas,1)+" coin/s, well done");
 
 }
