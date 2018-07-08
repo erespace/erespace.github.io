@@ -60,7 +60,7 @@ var vid = document.getElementById("myVideo");
                 
                 
           alert("I am an alert box!");
-                showNotification();
+                
                 //notifyMe("Hello", "Did you lock your Door?");
               //  window.navigator.vibrate(200); // vibrate for 200ms
 //sos    //window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
@@ -83,23 +83,7 @@ function stopWorker() {
     
     
     
-    
-    navigator.serviceWorker.register('sw.js');
 
-function showNotification() {
-  Notification.requestPermission(function(result) {
-    if (result === 'granted') {
-      navigator.serviceWorker.ready.then(function(registration) {
-        registration.showNotification('Vibration Sample', {
-          body: 'Buzz! Buzz!',
-          icon: '../images/touch/chrome-touch-icon-192x192.png',
-          vibrate: [200, 100, 200, 100, 200, 100, 200],
-          tag: 'vibration-sample'
-        });
-      });
-    }
-  });
-}
 </script>
 <audio controls id="myVideo">
   <source src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3" type="audio/ogg">
