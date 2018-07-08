@@ -17,6 +17,15 @@ function startWorker() {
         }
         w.onmessage = function(event) {
             document.getElementById("result").innerHTML = event.data;
+            
+            if(event.data===20){
+    window.navigator.vibrate(200); // vibrate for 200ms
+    //window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
+    
+    }
+            
+            
+            
         };
     } else {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
