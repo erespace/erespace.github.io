@@ -1,7 +1,7 @@
 <html>
 <body>
 
-<p>Count 33334567numbers: <output id="result"></output></p>
+<p>Count 333345678numbers: <output id="result"></output></p>
 <button onclick="startWorker()">Start Worker</button> 
 <button onclick="stopWorker()">Stop Worker</button>
 
@@ -52,7 +52,13 @@ function startWorker() {
             document.getElementById("result").innerHTML = event.data;
             
             if(event.data===20){
-    notifyMe("hello","did you lock your door");
+var vid = document.getElementById("myVideo");
+
+    vid.autoplay = true;
+    vid.load();
+              
+                
+                
           alert("I am an alert box!");
               //  window.navigator.vibrate(200); // vibrate for 200ms
 //sos    //window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]);
@@ -73,6 +79,9 @@ function stopWorker() {
     w = undefined;
 }
 </script>
-
+<video id="myVideo">
+  <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+  Your browser does not support HTML5 video.
+</video>
 </body>
 </html>
