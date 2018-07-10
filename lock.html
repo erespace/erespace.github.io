@@ -82,6 +82,7 @@ var vid = document.getElementById("myVideo");
 function stopWorker() {
     
     clearTimeout(timer);
+      var outstatus = document.getElementById("outstatus");
     outstatus.innerHTML = "Stopped Locating";
     w.terminate();
     w = undefined;
