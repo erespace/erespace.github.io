@@ -1,7 +1,7 @@
 <html>
 <body>
 
-<p>Count 3333456789012345678numbers: <output id="result"></output></p>
+<p>Count 33334567890123456789numbers: <output id="result"></output></p>
 <button onclick="startWorker();geoFindMe()">Start Worker</button> 
 <button onclick="stopWorker()">Stop Worker</button>
 
@@ -21,12 +21,13 @@
     var latitude  = position.coords.latitude;
     var longitude = position.coords.longitude;
 
-    output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
+ //   output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
+  output.innerHTML += '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
 
-    var img = new Image();
-    img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
+    //var img = new Image();
+    //img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
 
-    output.appendChild(img);
+    //output.appendChild(img);
   }
 
   function error() {
