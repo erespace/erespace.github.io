@@ -1,7 +1,7 @@
 <html>
 <body>
 
-<p>Count 333345678901234567891230numbers: <output id="result"></output></p>
+<p>Count 3333456789012345678912340numbers: <output id="result"></output></p>
 <button onclick="startWorker();geoFindMe()">Start Worker</button> 
 <button onclick="stopWorker()">Stop Worker</button>
 <p><p id="outstatus"></p> </p>
@@ -14,10 +14,10 @@
   var output = document.getElementById("status");
   var outstatus = document.getElementById("outstatus");
 
-  if (!navigator.geolocation){
-   outstatus.innerHTML = "<p>Geolocation is not supported by your browser</p>";
-    return;
-  }
+  //if (!navigator.geolocation){
+ //  outstatus.innerHTML = "<p>Geolocation is not supported by your browser</p>";
+//    return;
+//  }
 
   function success(position) {
     var latitude  = position.coords.latitude;
