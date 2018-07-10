@@ -80,10 +80,9 @@ var vid = document.getElementById("myVideo");
 }
 
 function stopWorker() {
-    
+    document.getElementById("outstatus").innerHTML = "Stopped Locating";
     clearTimeout(timer);
-      var outstatus = document.getElementById("outstatus");
-    outstatus.innerHTML = "Stopped Locating";
+      
     w.terminate();
     w = undefined;
 }
