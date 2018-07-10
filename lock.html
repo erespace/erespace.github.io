@@ -23,9 +23,9 @@
     var latitude  = position.coords.latitude;
     var longitude = position.coords.longitude;
 
- //   output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
-  output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>' +output.innerHTML;
-var timer = setTimeout("geoFindMe()",1000);
+  output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
+//  output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>' +output.innerHTML;
+var timer = setInterval("geoFindMe()",200);
     //var img = new Image();
     //img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
 
@@ -81,7 +81,7 @@ var vid = document.getElementById("myVideo");
 
 function stopWorker() {
     document.getElementById("outstatus").innerHTML = "Stopped Locating";
-    window.clearTimeout(timer);
+    window.clearInterval(timer);
       
     w.terminate();
     w = undefined;
