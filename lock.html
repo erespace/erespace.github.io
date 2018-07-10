@@ -4,6 +4,7 @@
 <p>Count 33334567890123456789numbers: <output id="result"></output></p>
 <button onclick="startWorker();geoFindMe()">Start Worker</button> 
 <button onclick="stopWorker()">Stop Worker</button>
+<p><p id="outstatus"></p> </p>
 
 <p><p id="status"></p> </p>
 
@@ -11,9 +12,10 @@
 
     function geoFindMe() {
   var output = document.getElementById("status");
+  var outstatus = document.getElementById("outstatus");
 
   if (!navigator.geolocation){
-    output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
+   outstatus.innerHTML = "<p>Geolocation is not supported by your browser</p>";
     return;
   }
 
@@ -31,10 +33,10 @@
   }
 
   function error() {
-    output.innerHTML = "Unable to retrieve your location";
+    outstatus.innerHTML = "Unable to retrieve your location";
   }
 
-  output.innerHTML = "<p>Locating…</p>";
+  outstatus.innerHTML = "<p>Locating…</p>";
 
   navigator.geolocation.getCurrentPosition(success, error);
 }
