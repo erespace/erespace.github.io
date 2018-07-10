@@ -2,7 +2,7 @@
 <body>
 
 <p>Count 3333456789012345numbers: <output id="result"></output></p>
-<button onclick="startWorker()">Start Worker</button> 
+<button onclick="startWorker();getLocation">Start Worker</button> 
 <button onclick="stopWorker()">Stop Worker</button>
 
 <p><strong id="status"></strong> </p>
@@ -17,6 +17,10 @@ function getLocation() {
     } else { 
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
+    
+    
+    
+setTimeout("getLocation()",1000);    
 }
 
 function showPosition(position) {
@@ -24,7 +28,6 @@ function showPosition(position) {
     "<br>Longitude: " + position.coords.longitude;
 }
     
-setTimeout("getLocation()",1000);    
 var w;
 
 function startWorker() {
