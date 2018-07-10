@@ -87,11 +87,11 @@ function stopWorker() {
   
 
 }
-    
+ var sw="off";  
   function startstoptimer(){
       
       
-   if (sw != "on") {
+   if (sw = "off") {
       clearTimeout(timer);
    } else {
       var timer = setTimeout(function() {geoFindMe();}, 1000);
