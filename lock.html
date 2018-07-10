@@ -1,7 +1,7 @@
 <html>
 <body>
 
-<p>Count 333345678901234567890123456789012345--numbers: <output id="result"></output></p>
+<p>Count 3333456789012345678901234567890123456--numbers: <output id="result"></output></p>
 <button onclick="startWorker();geoFindMe()">Start Locating</button> 
 <button onclick="stopWorker()">Stop Locating</button>
 <p><p id="outstatus"></p> </p>
@@ -82,24 +82,26 @@ var vid = document.getElementById("myVideo");
 function stopWorker() {
         w.terminate();
     w = undefined;
-     startstoptimer();
+     stoptimer();
     document.getElementById("outstatus").innerHTML = "Stopped Locating";
   
 
 }
- var sw="off";  
+   
   function startstoptimer(){
       
       
-   if (sw = "off") {
-      clearTimeout(timer);
-   } else {
+  
       var timer = setTimeout(function() {geoFindMe();}, 1000);
-       var sw = "on";
-   }
+
   
   }
-    
+ stoptimer(){
+     
+      clearTimeout(timer);
+ 
+     
+ }
 
 </script>
 <audio controls id="myVideo">
