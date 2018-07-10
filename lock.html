@@ -1,7 +1,7 @@
 <html>
 <body>
 
-<p>Count 33334567890123456789012345678901--numbers: <output id="result"></output></p>
+<p>Count 333345678901234567890123456789012--numbers: <output id="result"></output></p>
 <button onclick="startWorker();geoFindMe()">Start Locating</button> 
 <button onclick="stopWorker()">Stop Locating</button>
 <p><p id="outstatus"></p> </p>
@@ -25,7 +25,7 @@
 
   output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
 //  output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>' +output.innerHTML;
-var timer = setInterval("geoFindMe()",200);
+ timer = setInterval("geoFindMe()",600);
     //var img = new Image();
     //img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
 
