@@ -13,6 +13,33 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable
  "><title>CBDCartel.co.uk</title>
 <script src="https://www.paypalobjects.com/api/checkout.js"></script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-543d5bc17a820d48"></script>
+ 
+ <script>
+  function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+} 
+  
+  
+  
+ </script>
+ 
 <style>
  
  
@@ -21,6 +48,51 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable
  
  
  
+ 
+  /* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+} 
+ .tabcontent {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
  </style>
 </head>
 
@@ -499,6 +571,31 @@ margin-left: 5px;margin-bottom:5px;text-align:justify;paddming:5px; "id="100">
 
 150, 150, 1);">
   
+ 
+ <!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+</div>
+
+<!-- Tab content -->
+<div id="London" class="tabcontent">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p>
+</div>
+
+ 
+ 
+ 
+ 
+ 
+ 
 This product is not for use by or sale to persons under the age of 18.
    <h3 style="
 right: 140px;
@@ -554,7 +651,12 @@ text-shadow: 3px 2px 2px green;
 : 40%;
 -wDSebkit-transform: rotateZ(25deg);
 transSform: rotateZ(-32deg);" onclick="alert('Terms and Conditions\n\n\n\nAll intellectual property rights, including but not limited to trademarks, copyrights, trade name rights, database rights, domain names, patents and portrait rights, and the know-how and trade secrets with regard to the Website will at all times remain with Animus Concia Ltd.\n\nPayments are non-refundable. Option(s) to cancel any full or part payment(s) received is nullified and no refund(s) will be given as 3rd party(s) charge(s), exchange rate(s) and tax(s) apply.\n\nAll trademarks owned by their respective owners. Animus Concia Ltd trading as CBDCartel.co.uk, Companies House #SC511234 -CBDCartel.co.uk (c) 2018');">TERMS AND CONDITIONS</h3> 
+
+ Games
  
+ Forum
+ 
+ Chat
  
  <BR>
   <HR>
