@@ -37,7 +37,7 @@ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable
 } 
   
   
-  
+  document.getElementById("defaultOpen").click();
  </script>
  
 <style>
@@ -574,13 +574,13 @@ margin-left: 5px;margin-bottom:5px;text-align:justify;paddming:5px; "id="100">
  
  <!-- Tab links -->
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Terms')">Terms</button>
+  <button class="tablinks" onclick="openCity(event, 'Terms')" id="defaultOpen">Terms</button>
   <button class="tablinks" onclick="openCity(event, 'DeliveryReturns')">Delivery + Returns</button>
   <button class="tablinks" onclick="openCity(event, 'Privacy')">Privacy</button>
 </div>
 
 <!-- Tab content -->
-<div id="Terms" class="tabcontent">
+<div id="Terms" class="tabcontent" id="defaultOpen">
   <h3>Terms and Conditions</h3>
   <p>
     This product is not for use by or sale to persons under the age of 18.<br>
