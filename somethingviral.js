@@ -107,7 +107,7 @@ document.getElementById("facebookbutton2").src = "https://www.facebook.com/plugi
 		 //document.getElementById("googlebutton2").href="http://somethingviral.tk/two.html?"+window.btoa(product+"***b")+"&B=B";
 //FB.XFBML.parse();	 
 
-	 document.title="somethingViral - "+entryArray[0];
+	 document.title="100pound.tk - "+entryArray[0];
 	 show_mili("disqus_thread");
 	// if(counter>5){
 	// var counter = 1;
