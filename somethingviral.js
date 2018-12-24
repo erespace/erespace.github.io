@@ -91,7 +91,7 @@ document.getElementById("insync").src = "http://erespace.p4o.net/put.php?key="+s
 		 //alert (window.btoa(product));
 		 
 		   ///document.getElementById("googlebutton1").href= "http://somethingviral.tk/one.html?"+window.btoa(product+"***a")+"&A=A";
- document.getElementById("facebookbutton1").src = "http://www.facebook.com/plugins/like.php?href=http://somethingviral.tk/one.html?"+window.btoa(product+"***a")+"&A=A&amp;layout=button_count&amp;show_faces=false&amp;width=240&amp;action=like&amp;font=verdana&amp;colorscheme=light";	 
+ document.getElementById("facebookbutton1").src = "https://www.facebook.com/plugins/like.php?href=http://100pound.tk/one.html?"+window.btoa(product+"***a")+"&A=A&amp;layout=button_count&amp;show_faces=false&amp;width=240&amp;action=like&amp;font=verdana&amp;colorscheme=light";	 
 
 		///document.getElementById("googlebutton1").href="http://somethingviral.tk/one.html?"+window.btoa(product+"***a")+"&A=A";
 		 // var fbz = document.createElement('fb:like'); 
@@ -103,7 +103,7 @@ document.getElementById("insync").src = "http://erespace.p4o.net/put.php?key="+s
  //fbz.setAttribute("font","arial");
  //document.getElementById("FaceBookLikeButton2").appendChild(fbz);
 // document.getElementById("googlebutton2").href= "=http://somethingviral.tk/two.html?"+window.btoa(product+"***b")+"&B=B";
-document.getElementById("facebookbutton2").src = "http://www.facebook.com/plugins/like.php?href=http://somethingviral.tk/two.html?"+window.btoa(product+"***b")+"&B=B&amp;layout=button_count&amp;show_faces=false&amp;width=240&amp;action=like&amp;font=verdana&amp;colorscheme=light";	 
+document.getElementById("facebookbutton2").src = "https://www.facebook.com/plugins/like.php?href=http://100pound.tk/two.html?"+window.btoa(product+"***b")+"&B=B&amp;layout=button_count&amp;show_faces=false&amp;width=240&amp;action=like&amp;font=verdana&amp;colorscheme=light";	 
 		 //document.getElementById("googlebutton2").href="http://somethingviral.tk/two.html?"+window.btoa(product+"***b")+"&B=B";
 //FB.XFBML.parse();	 
 
