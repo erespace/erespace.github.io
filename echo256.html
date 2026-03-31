@@ -1681,7 +1681,7 @@ function showPopMessage(message) {
  
  let TILE_SIZE = 40;//40//80
   let GRID_WIDTH=6;//5 6 4 6 8 Number of tiles across
-  let GRID_HEIGHT =6 ; //912 20 15 Number of tiles down
+  let GRID_HEIGHT =6; //912 20 15 Number of tiles down
   
   let VISIBLE_WIDTH=6;  //4 
 let  VISIBLE_HEIGHT =6; //8
@@ -23972,7 +23972,7 @@ function spawnExplosion3D(player) {
         const screenY = p.y - cameraY;
 
         // Perspective Projection and Scaling
-        const scaleFactor = 1 + (p.z / DEPTH_SCALE);
+        const scaleFactor = 1 + (p.z / DEPTH_SCALE)*(0.018*TILE_SIZE);
         const screenRadius = p.baseSize * scaleFactor;
 
         // Fading out
@@ -29248,6 +29248,7 @@ const MAX_SPAWN_DELAY_MS = 4000; // Maximum time to wait before the next wave st
 let nextSpawnIndex = 0; 
 
 function spawnCats(catsToSpawn) {
+
   if (police.length >= GRID_WIDTH || !ALL_SPAWN_POINTS || ALL_SPAWN_POINTS.length === 0) {
      // return; 
    }
@@ -29315,6 +29316,13 @@ const orbitrandomNumber = Math.random() * (0.2 - 0.075) + 0.075;
 // scheduleAndSpawnCats(3);
 
 function spawnGuards(catsToSpawn) {
+if(score>50){
+     removeGuardOneByOne(); 
+     return;
+    ///
+
+}
+
     // 1. Safety Checks: Cap total guards (e.g., 10) and ensure spawn points exist
     const MAX_GUARDS = 10;
     if (Guard.length >= MAX_GUARDS || !ALL_SPAWN_POINTS || ALL_SPAWN_POINTS.length === 0) {
@@ -32270,6 +32278,7 @@ playShieldAlert();
 }
 function trackPlayer(entity, sensorRange) {
     if (!entity.active) return;
+    if(score<45)return;
 
     // --- COORDINATE FIX ---
     // Calculate distance in World Pixels
@@ -36948,7 +36957,7 @@ earthImage.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Whol
 const EARTH_RADIUS = TILE_SIZE * 4;     // visual size
 const CURVE_STRENGTH = 0.18;            // 0.1–0.25 sweet spot
 function drawEarth(entity) {
-    return;
+   return;
     if (!sphereMesh || typeof ctx === 'undefined') {
         console.error("Missing required global dependencies: ctx or sphereMesh not initialized.");
         return;
@@ -45702,6 +45711,58 @@ triggerTargetLock(player);
 }
 
 function shuntEnemies(p1, p2) {
+    // 1. COLLISION COOLDOWN CHECK
+    // If either is already in a "recovering" state, don't trigger again
+    if (p1.collisionCooldown > 0 || p2.collisionCooldown > 0) return;
+
+    const centerX = (GRID_WIDTH / 2) * TILE_SIZE;
+    const centerY = (GRID_HEIGHT / 2) * TILE_SIZE;
+    
+    // 2. FORCE SEPARATION (The "Anti-Stick" move)
+    // We move them slightly apart immediately so the next frame doesn't re-trigger
+    const buffer = TILE_SIZE * 0.5; 
+    const dist1 = Math.hypot(p1.x - centerX, p1.y - centerY);
+    const dist2 = Math.hypot(p2.x - centerX, p2.y - centerY);
+
+    if (dist1 > dist2) {
+        p1.radius += buffer;
+        p2.radius -= buffer;
+    } else {
+        p1.radius -= buffer;
+        p2.radius += buffer;
+    }
+
+    // 3. DIRECTION & SPEED FLIP
+    // Swapping facings and reversing orbital speeds
+    const tempFacing = p1.facing;
+    p1.facing = p2.facing; 
+    p2.facing = tempFacing;
+
+    p1.orbitSpeed *= -1.2; // Extra "kick" to get them away from each other
+    p2.orbitSpeed *= -1.2;
+
+    // 4. SET COOLDOWN (The fix for sticking)
+    // Set a small timer (e.g., 10 frames) where they can't collide again
+    p1.collisionCooldown = 10; 
+    p2.collisionCooldown = 10;
+
+    // 5. JUICE & FEEDBACK
+    triggerDazedCube(p1);
+    triggerDazedCube(p2);
+    triggerCameraShake(8, 100);
+    spawnWireframeExplosion(p1);
+    spawnWireframeExplosion(p2);
+
+    // 6. IMMEDIATE POSITION UPDATE
+    [p1, p2].forEach(p => {
+        if (p.radius < TILE_SIZE * 2) p.radius = TILE_SIZE * 2;
+        p.x = centerX + Math.cos(p.angle) * p.radius;
+        p.y = centerY + Math.sin(p.angle) * p.radius;
+    });
+
+    if (typeof playMilitantBeeps === 'function') playMilitantBeeps();
+}
+function shuntEnemiesstuck(p1, p2) {
 //shuntEnemiesOld(p1,p2);
 
     // 1. PHYSICAL RECOIL (The "Punch")
@@ -45713,10 +45774,10 @@ function shuntEnemies(p1, p2) {
     const dist2 = Math.hypot(p2.x - centerX, p2.y - centerY);
 
     // Push them apart radially (one goes out, one goes in)
-    const punchForce = TILE_SIZE * 3; 
+    const punchForce = TILE_SIZE * 5; 
     if (dist1 > dist2) {
         p1.radius += punchForce;
-        p2.radius -= punchForce;
+        p2.radius += punchForce;
     } else {
         p1.radius -= punchForce;
         p2.radius += punchForce;
@@ -46435,9 +46496,12 @@ playAsteroidAlert();
 
 setTimeout(() => {  
 if(Guard.length<GRID_HEIGHT ) {
-spawnGuards(LEVEL_SPEED);
+
+spawnGuards(GRID_WIDTH);
 
 }
+
+
 spawnCats(GRID_WIDTH);
 
 
@@ -50760,7 +50824,7 @@ function renderCheese(ctx, TILE_SIZE) {
         ctx.translate(p.x, p.y);
         ctx.globalAlpha = Math.max(0, p.alpha);
 
-        const particleSize = 8 * scaleFactor; // scale particle size
+        const particleSize = 8 * scaleFactor*(0.018*TILE_SIZE); // scale particle size
         ctx.fillStyle = "white";
         ctx.beginPath();
         
@@ -56323,14 +56387,15 @@ let streakRequired=cheeseGoal+1;
             ));
 
 triggerTargetLock(nearestPolice);
-         spawnRecoilEffect(player, ctx);   scoreboardSystem.spawnScore({ x: nearestPolice.x, y: nearestPolice.y }, {
+        // spawnRecoilEffect(player, ctx);  
+          scoreboardSystem.spawnScore({ x: nearestPolice.x, y: nearestPolice.y }, {
                 text: "LOCK-ON",
                 color: "BLUE",
                 duration: 10,
                 startSize: TILE_SIZE*.2,
             });
           //  playChiptuneRocketLaunch();               
-    
+   if(score>29){ 
     
     playChiptuneBeep(); 
             BlinkingSystem.spawn({ x:((GRID_WIDTH-1)/2), y: (GRID_HEIGHT / 2) -1}, { 
@@ -56353,8 +56418,9 @@ triggerTargetLock(nearestPolice);
   }else{
       
                
-        // lasersystem.add(GRID_WIDTH/2, GRID_HEIGHT/2, nearestPolice, Math.floor((GRID_HEIGHT*.50) ));
-  }          
+         lasersystem.add(GRID_WIDTH/2, GRID_HEIGHT/2, nearestPolice, Math.floor((GRID_HEIGHT*.50) ));
+  }   
+  }       
             
         } else {
             console.log("No active police on the field");
@@ -56385,7 +56451,7 @@ BlinkingSystem.spawn({ x:((GRID_WIDTH-1)/2), y: (GRID_WIDTH / 2)-1 }, {
 playInvasionAlert();
 
 // alert(police.length);
-spawnCats(GRID_WIDTH);
+spawnCats(GRID_WIDTH*LEVEL_SPEED);
 //police.push({ x: GRID_WIDTH - 1, y: GRID_HEIGHT - 1, src: '', health: LEVEL_SPEED, maxHealth: LEVEL_SPEED }); 
 // Optional: Add a small puff of particles or a sound when it actually appears
 
@@ -60204,7 +60270,7 @@ for (const p of police) {
 //p.orbitSpeed=p.orbitSpeed*2;
 //if(p.maxHealth<3){
     // Boss Speed Control
-let currentSpeed = Math.min(60, 5 * LEVEL_SPEED);
+let currentSpeed = Math.min(60, 3 * LEVEL_SPEED);
 if(p.active){
 
 trackPlayer(p,currentSpeed);
@@ -60335,6 +60401,11 @@ for (const p of police) {
 
 
     // Rendering Logic
+    
+   // Inside your entity update loop:
+if (p.collisionCooldown > 0) {
+    p.collisionCooldown--; 
+}
     if (p.maxHealth < 3) {
   // updateNewtonianOrbit (p, 3/60);
  // trackPlayer(p,currentSpeed);
@@ -60360,7 +60431,7 @@ for (const p of police) {
      // drawSelectionBoxPurple(p)
    // draw3dPyramid(p);
     }
-  
+ // trackPlayer(p,currentSpeed);
   // trackPlayer(p,100); 
 }
 }
@@ -60408,6 +60479,12 @@ if(swipecount<2){
 
 }else{
     //popupSystem.process();
+    
+}
+
+if(score>50){
+removePoliceOneByOne();
+        removeGuardOneByOne();  
     
 }
 
@@ -62791,6 +62868,8 @@ function destroyMouse() {
   // spawnDog();
 </script>
 </body
-
+wnCat();
+  
+  // spawnDog();
+</script>
 </body
-/body
